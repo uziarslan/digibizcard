@@ -1,0 +1,475 @@
+<%-include('../partials/head', {title: "Setting"}) %>
+<%-include('../partials/navbarUpload', { userId }) %>
+
+
+    <div class="homeMainRow">
+        <div class="firstColumnHome okCheck">
+            <div class="homeOptions addHeight">
+                    <div  class="indvidualOption"  onclick="toggleAccount()">
+                        <svg id="hidePerson" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21.6489 20.625C21.5831 20.739 21.4884 20.8337 21.3743 20.8995C21.2603 20.9654 21.1309 21 20.9992 21H2.99923C2.86764 20.9998 2.73841 20.9651 2.6245 20.8992C2.51059 20.8333 2.41602 20.7386 2.35029 20.6246C2.28455 20.5107 2.24997 20.3814 2.25 20.2498C2.25003 20.1182 2.28469 19.9889 2.35048 19.875C3.77829 17.4065 5.9786 15.6365 8.54641 14.7975C7.27626 14.0414 6.28943 12.8892 5.73747 11.5179C5.18551 10.1467 5.09893 8.63211 5.49105 7.20688C5.88316 5.78165 6.73228 4.52454 7.908 3.6286C9.08372 2.73266 10.521 2.24744 11.9992 2.24744C13.4774 2.24744 14.9147 2.73266 16.0905 3.6286C17.2662 4.52454 18.1153 5.78165 18.5074 7.20688C18.8995 8.63211 18.8129 10.1467 18.261 11.5179C17.709 12.8892 16.7222 14.0414 15.452 14.7975C18.0198 15.6365 20.2202 17.4065 21.648 19.875C21.7139 19.9889 21.7488 20.1182 21.7489 20.2499C21.7491 20.3815 21.7146 20.5109 21.6489 20.625Z" fill="#5C47CD"/>
+                            </svg>
+                            <svg id="showPerson" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21.6503 19.875C20.2225 17.4066 18.0222 15.6366 15.4544 14.7975C16.7246 14.0414 17.7114 12.8892 18.2634 11.5179C18.8153 10.1467 18.9019 8.63211 18.5098 7.20688C18.1177 5.78166 17.2685 4.52454 16.0928 3.6286C14.9171 2.73266 13.4798 2.24744 12.0016 2.24744C10.5234 2.24744 9.08609 2.73266 7.91037 3.6286C6.73465 4.52454 5.88553 5.78166 5.49342 7.20688C5.1013 8.63211 5.18787 10.1467 5.73983 11.5179C6.2918 12.8892 7.27863 14.0414 8.54878 14.7975C5.98097 15.6356 3.78066 17.4056 2.35285 19.875C2.30049 19.9604 2.26576 20.0554 2.2507 20.1544C2.23565 20.2534 2.24059 20.3544 2.26521 20.4515C2.28984 20.5486 2.33366 20.6397 2.39409 20.7196C2.45452 20.7995 2.53033 20.8664 2.61706 20.9165C2.70378 20.9666 2.79966 20.9988 2.89904 21.0113C2.99842 21.0237 3.09928 21.0161 3.19568 20.989C3.29208 20.9618 3.38205 20.9156 3.4603 20.8531C3.53855 20.7906 3.60349 20.713 3.65128 20.625C5.41753 17.5725 8.53941 15.75 12.0016 15.75C15.4638 15.75 18.5857 17.5725 20.3519 20.625C20.3997 20.713 20.4646 20.7906 20.5429 20.8531C20.6211 20.9156 20.7111 20.9618 20.8075 20.989C20.9039 21.0161 21.0048 21.0237 21.1042 21.0113C21.2035 20.9988 21.2994 20.9666 21.3861 20.9165C21.4729 20.8664 21.5487 20.7995 21.6091 20.7196C21.6695 20.6397 21.7134 20.5486 21.738 20.4515C21.7626 20.3544 21.7675 20.2534 21.7525 20.1544C21.7374 20.0554 21.7027 19.9604 21.6503 19.875ZM6.7516 8.99999C6.7516 7.96164 7.0595 6.9466 7.63638 6.08324C8.21326 5.21989 9.0332 4.54698 9.99251 4.14962C10.9518 3.75226 12.0074 3.64829 13.0258 3.85086C14.0442 4.05344 14.9797 4.55345 15.7139 5.28768C16.4481 6.0219 16.9481 6.95736 17.1507 7.97576C17.3533 8.99416 17.2493 10.0498 16.852 11.0091C16.4546 11.9684 15.7817 12.7883 14.9183 13.3652C14.055 13.9421 13.0399 14.25 12.0016 14.25C10.6097 14.2485 9.27517 13.6949 8.29093 12.7107C7.30669 11.7264 6.75309 10.3919 6.7516 8.99999Z" fill="#0E0E11"/>
+                                </svg>
+                          
+                          <p class="homeOptionText">Account Preferences</p>
+                    </div>
+                    <div class="indvidualOption" onclick="changeColor(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19.5 7.5H16.5V5.25C16.5 4.05653 16.0259 2.91193 15.182 2.06802C14.3381 1.22411 13.1935 0.75 12 0.75C10.8065 0.75 9.66193 1.22411 8.81802 2.06802C7.97411 2.91193 7.5 4.05653 7.5 5.25V7.5H4.5C4.10218 7.5 3.72064 7.65804 3.43934 7.93934C3.15804 8.22064 3 8.60218 3 9V19.5C3 19.8978 3.15804 20.2794 3.43934 20.5607C3.72064 20.842 4.10218 21 4.5 21H19.5C19.8978 21 20.2794 20.842 20.5607 20.5607C20.842 20.2794 21 19.8978 21 19.5V9C21 8.60218 20.842 8.22064 20.5607 7.93934C20.2794 7.65804 19.8978 7.5 19.5 7.5ZM9 5.25C9 4.45435 9.31607 3.69129 9.87868 3.12868C10.4413 2.56607 11.2044 2.25 12 2.25C12.7956 2.25 13.5587 2.56607 14.1213 3.12868C14.6839 3.69129 15 4.45435 15 5.25V7.5H9V5.25ZM19.5 19.5H4.5V9H19.5V19.5Z" fill="#0E0D15"/>
+                          </svg>
+                          <p class="homeOptionText">Login and Security</p>
+                    </div>
+                    <div id="Notifications" class="indvidualOption"  onclick="toggleNotification()">
+                        <svg id="hideSvg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M20.7927 16.4944C20.2724 15.5981 19.4989 13.0622 19.4989 9.75C19.4989 7.76088 18.7087 5.85322 17.3022 4.4467C15.8957 3.04018 13.988 2.25 11.9989 2.25C10.0098 2.25 8.10214 3.04018 6.69561 4.4467C5.28909 5.85322 4.49891 7.76088 4.49891 9.75C4.49891 13.0631 3.72454 15.5981 3.20423 16.4944C3.07135 16.7222 3.00091 16.9811 3.00001 17.2449C2.9991 17.5086 3.06776 17.768 3.19907 17.9967C3.33037 18.2255 3.51968 18.4156 3.74789 18.5478C3.9761 18.6801 4.23515 18.7498 4.49891 18.75H8.32485C8.49789 19.5967 8.95806 20.3577 9.62754 20.9042C10.297 21.4507 11.1347 21.7492 11.9989 21.7492C12.8631 21.7492 13.7008 21.4507 14.3703 20.9042C15.0398 20.3577 15.4999 19.5967 15.673 18.75H19.4989C19.7626 18.7496 20.0215 18.6798 20.2496 18.5475C20.4777 18.4151 20.6669 18.225 20.7981 17.9963C20.9292 17.7676 20.9978 17.5083 20.9969 17.2446C20.9959 16.9809 20.9255 16.7222 20.7927 16.4944ZM11.9989 20.25C11.5337 20.2499 11.0801 20.1055 10.7003 19.8369C10.3205 19.5683 10.0333 19.1886 9.87829 18.75H14.1195C13.9645 19.1886 13.6773 19.5683 13.2975 19.8369C12.9178 20.1055 12.4641 20.2499 11.9989 20.25ZM4.49891 17.25C5.22079 16.0087 5.99891 13.1325 5.99891 9.75C5.99891 8.1587 6.63105 6.63258 7.75627 5.50736C8.88149 4.38214 10.4076 3.75 11.9989 3.75C13.5902 3.75 15.1163 4.38214 16.2416 5.50736C17.3668 6.63258 17.9989 8.1587 17.9989 9.75C17.9989 13.1297 18.7752 16.0059 19.4989 17.25H4.49891Z" fill="#0E0D15"/>
+                            </svg>
+                          <svg id="showSvg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M20.7927 16.4944C20.2724 15.5981 19.4989 13.0622 19.4989 9.75C19.4989 7.76088 18.7087 5.85322 17.3022 4.4467C15.8957 3.04018 13.988 2.25 11.9989 2.25C10.0098 2.25 8.10214 3.04018 6.69561 4.4467C5.28909 5.85322 4.49891 7.76088 4.49891 9.75C4.49891 13.0631 3.72454 15.5981 3.20423 16.4944C3.07135 16.7222 3.00091 16.9811 3.00001 17.2449C2.9991 17.5086 3.06776 17.768 3.19907 17.9967C3.33037 18.2255 3.51968 18.4156 3.74789 18.5478C3.9761 18.6801 4.23515 18.7498 4.49891 18.75H8.32485C8.49789 19.5967 8.95806 20.3577 9.62754 20.9042C10.297 21.4507 11.1347 21.7492 11.9989 21.7492C12.8631 21.7492 13.7008 21.4507 14.3703 20.9042C15.0398 20.3577 15.4999 19.5967 15.673 18.75H19.4989C19.7626 18.7496 20.0215 18.6798 20.2496 18.5475C20.4777 18.4151 20.6669 18.225 20.7981 17.9963C20.9292 17.7676 20.9978 17.5083 20.9969 17.2446C20.9959 16.9809 20.9255 16.7222 20.7927 16.4944ZM11.9989 20.25C11.5337 20.2499 11.0801 20.1055 10.7003 19.8369C10.3205 19.5683 10.0333 19.1886 9.87829 18.75H14.1195C13.9645 19.1886 13.6773 19.5683 13.2975 19.8369C12.9178 20.1055 12.4641 20.2499 11.9989 20.25Z" fill="#5C47CD"/>
+                            </svg>
+
+                          <p class="homeOptionText">Notifications</p>
+                    </div>
+                    <div class="indvidualOption" onclick="changeColor(this)">
+                        <svg id="svg4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M20.25 4.5H3.75003C3.3522 4.5 2.97067 4.65804 2.68937 4.93934C2.40806 5.22064 2.25003 5.60218 2.25003 6V21C2.2483 21.286 2.32921 21.5665 2.48305 21.8076C2.63689 22.0488 2.8571 22.2404 3.11721 22.3594C3.31543 22.4517 3.53138 22.4997 3.75003 22.5C4.10215 22.4992 4.4426 22.3736 4.71096 22.1456C4.71544 22.1427 4.71953 22.1392 4.72315 22.1353L7.7344 19.5H20.25C20.6478 19.5 21.0294 19.342 21.3107 19.0607C21.592 18.7794 21.75 18.3978 21.75 18V6C21.75 5.60218 21.592 5.22064 21.3107 4.93934C21.0294 4.65804 20.6478 4.5 20.25 4.5ZM20.25 18H7.7344C7.38117 17.9998 7.03922 18.1243 6.76877 18.3516L6.75753 18.3619L3.75003 21V6H20.25V18Z" />
+                          </svg>
+                          <p class="homeOptionText">Messages</p>
+                    </div>
+            </div>
+           
+        </div>
+        <div class="homeCenterData">
+      <div id="accountPrefrenses">
+        <div class="">
+            <div class="field">
+                <svg class="dropDownSVG" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M20.031 9.53068L12.531 17.0307C12.4614 17.1004 12.3787 17.1557 12.2876 17.1935C12.1966 17.2312 12.099 17.2506 12.0004 17.2506C11.9019 17.2506 11.8043 17.2312 11.7132 17.1935C11.6222 17.1557 11.5394 17.1004 11.4698 17.0307L3.96979 9.53068C3.82906 9.38995 3.75 9.19907 3.75 9.00005C3.75 8.80103 3.82906 8.61016 3.96979 8.46943C4.11052 8.32869 4.30139 8.24963 4.50042 8.24963C4.69944 8.24963 4.89031 8.32869 5.03104 8.46943L12.0004 15.4397L18.9698 8.46943C19.0395 8.39974 19.1222 8.34447 19.2132 8.30676C19.3043 8.26904 19.4019 8.24963 19.5004 8.24963C19.599 8.24963 19.6965 8.26904 19.7876 8.30676C19.8786 8.34447 19.9614 8.39974 20.031 8.46943C20.1007 8.53911 20.156 8.62183 20.1937 8.71288C20.2314 8.80392 20.2508 8.9015 20.2508 9.00005C20.2508 9.0986 20.2314 9.19618 20.1937 9.28722C20.156 9.37827 20.1007 9.46099 20.031 9.53068Z" fill="#79767A"/>
+                  </svg>
+                <label class="inputLable" for="language">Display Language</label>
+                <select
+                  name="location"
+                  id="language"
+                  class="form-control inputprofile optionprofile myDropdown"
+                >
+               
+                  <option value="" disabled selected>Select Language </option>
+                  <option value="english" class="optionprofile">English</option>
+                  <option value="urdu" class="optionprofile">Urdu</option>
+                  <option value="punjabi" class="optionprofile">Punjabi</option>
+                  <option value="Hindi" class="optionprofile">Hindi</option>
+                  <option value="arabic" class="optionprofile">Arabic</option>
+
+                </select>
+              </div>
+        </div>
+        <div class="indvidualSetting">
+            <div class="settingRow">
+                <p class="settingIndvidualText">Private account</p>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="privacyToggle" <%= user.isPrivate ? 'checked' : '' %>>
+                    <div class="toggle-switch-background">
+                      <div class="toggle-switch-handle"></div>
+                    </div>
+                  </label>
+            </div>
+            <p class="explainSetting">When your account is public, your profile, video resume and can be seen by anyone, on or off hireddd.</p>
+        </div>
+       
+        <div class="indvidualSetting">
+          <div class="settingRow">
+              <p class="settingIndvidualText">Hide likes and shortlisted</p>
+              <label class="toggle-switch">
+                  <input type="checkbox" id="hideLikesAndSavedCheckbox" <%= user.hideLikesAndSaved ? 'checked' : '' %> onchange="toggleHideLikesAndSaved()">
+                  <div class="toggle-switch-background">
+                      <div class="toggle-switch-handle"></div>
+                  </div>
+              </label>
+          </div>
+          <p class="explainSetting">The number of likes and shortlisted on your video resume will be hidden from others.</p>
+      </div>
+
+        <div class="indvidualSetting">
+            <div class="settingRow">
+                <p class="settingIndvidualText">Hide badges</p>
+                <label class="toggle-switch">
+                    <input type="checkbox">
+                    <div class="toggle-switch-background">
+                      <div class="toggle-switch-handle"></div>
+                    </div>
+                  </label>
+            </div>
+            <p class="explainSetting">The earned badges on your profile will be hidden from other.</p>
+        </div>
+       <div class="indvidualSetting">
+  <div class="settingRow">
+    <p class="settingIndvidualText">Hide Location</p>
+    <label class="toggle-switch">
+      <input type="checkbox" id="hideLocationCheckbox" <%= user.hideLocation ? 'checked' : '' %> onchange="toggleHideLocation()">
+      <div class="toggle-switch-background">
+        <div class="toggle-switch-handle"></div>
+      </div>
+    </label>
+  </div>
+  <p class="explainSetting">The location on your profile will be hidden from others.</p>
+</div>
+
+
+      </div>
+      <div id="NotificationsDiv">
+        <div class="indvidualSetting">
+          <div class="settingRow">
+            <p class="settingIndvidualText">Liked notification</p>
+            <label class="toggle-switch">
+              <input type="checkbox" id="likedNotificationCheckbox" <%= user.isLikedNotificationEnabled ? 'checked' : '' %> onchange="toggleLikedNotification()">
+              <div class="toggle-switch-background">
+                <div class="toggle-switch-handle"></div>
+              </div>
+            </label>
+          </div>
+          <p class="explainSetting">Receive notifications when an organization likes your profile.</p>
+        </div>
+        <div class="indvidualSetting">
+          <div class="settingRow">
+            <p class="settingIndvidualText">Shortlisted notification</p>
+            <label class="toggle-switch">
+              <input type="checkbox" id="shortlistedNotificationCheckbox" <%= user.isShortlistedNotificationEnabled ? 'checked' : '' %>>
+              <div class="toggle-switch-background">
+                <div class="toggle-switch-handle"></div>
+              </div>
+            </label>
+          </div>
+          <p class="explainSetting">Receive a notification when your video resume is shortlisted.</p>
+        </div>
+        <div class="indvidualSetting">
+            <div class="settingRow">
+                <p class="settingIndvidualText">Message Notification</p>
+                <label class="toggle-switch">
+                    <input type="checkbox">
+                    <div class="toggle-switch-background">
+                      <div class="toggle-switch-handle"></div>
+                    </div>
+                  </label>
+            </div>
+            <p class="explainSetting">The earned badges on your profile will be hidden from other.</p>
+        </div>
+        
+      </div>
+        </div>
+   
+        <div class="homethirdColumn"> 
+          <!-- <div class="registerProfileDiv">
+              <div class="regprofileLogo">
+                <img src="/images/regprofileLogo.svg" alt="">
+              </div>
+              <div class="regProfileText">
+                <h2 class="regProfileHeading">Create Profile</h2>
+                <p class="regProfilePara">Create a new profile to upload your video resume and to get hired.</p>
+              </div>
+
+              <a href="" class="regButtonProfile">
+                <div >
+                  Register
+                </div>
+              </a>
+          </div> -->
+          <div class="completeionProfileDiv">
+            <p class="completeionProfileheading">Profile Completion</p>
+            <p class="completeionProfileper">50%</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+            </div>
+            <p class="completeionProfiledes">
+              Complete your remaining profile
+              to standout from the rest of the
+              candidates
+            </p>
+
+            <a href="" class="regButtonProfile margin60">
+              <div >
+                Register
+              </div>
+            </a>
+        </div>
+          <div class="hiredddPremiumBox">
+            <svg class="cupHireedd" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 106 170" fill="none">
+              <path opacity="0.5" d="M85.0044 113.333C44.2051 113.333 36.9774 72.6714 35.697 40.4208C35.3409 31.4498 35.1628 26.9643 38.5324 22.8142C41.9021 18.6641 45.9351 17.9836 54.0011 16.6227C61.9632 15.2793 72.3713 14.1666 85.0044 14.1666C97.6382 14.1666 108.046 15.2793 116.008 16.6227C124.074 17.9836 128.107 18.6641 131.477 22.8142C134.846 26.9643 134.668 31.4498 134.312 40.4208C133.032 72.6714 125.804 113.333 85.0044 113.333Z" fill="#C8BFFF"/>
+              <path d="M35.6933 40.4208C36.3189 56.1776 38.364 73.9422 45.0504 87.9913L25.0964 76.9051C19.7668 73.9443 17.102 72.4639 15.6344 69.9698C14.1668 67.4757 14.1667 64.4272 14.1665 58.3303V57.8165C14.1663 50.4244 14.1662 46.7281 16.1718 43.9455C18.1774 41.1629 21.6838 39.9941 28.6967 37.6564L35.4161 35.4166L35.5389 36.0308C35.5721 37.3674 35.6298 38.823 35.6933 40.4208Z" fill="#C8BFFF"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M37.1875 155.833C37.1875 152.899 39.566 150.521 42.5 150.521H127.5C130.434 150.521 132.812 152.899 132.812 155.833C132.812 158.767 130.434 161.146 127.5 161.146H42.5C39.566 161.146 37.1875 158.767 37.1875 155.833Z" fill="#C8BFFF"/>
+              <path opacity="0.5" d="M109.496 150.521H60.5127L62.6152 138.126C63.2773 134.815 66.1844 132.432 69.5609 132.432H100.447C103.823 132.432 106.731 134.815 107.393 138.126L109.496 150.521Z" fill="#C8BFFF"/>
+              <path d="M85.0014 113.335C83.1626 113.335 81.3925 113.252 79.6875 113.091V132.432H90.3125V113.091C88.6083 113.252 86.8388 113.335 85.0014 113.335Z" fill="#C8BFFF"/>
+              <path d="M78.9501 42.6594C81.6418 37.8309 82.9876 35.4166 85 35.4166C87.0124 35.4166 88.3582 37.8309 91.0499 42.6594L91.7461 43.9086C92.5104 45.2807 92.8929 45.9668 93.4894 46.4195C94.0858 46.8721 94.8281 47.0402 96.3135 47.3762L97.6657 47.6822C102.892 48.8648 105.506 49.4561 106.128 51.4556C106.75 53.455 104.968 55.5384 101.405 59.7052L100.483 60.7832C99.4705 61.9673 98.9641 62.5593 98.736 63.2917C98.5086 64.0242 98.5851 64.8141 98.7381 66.394L98.8776 67.8322C99.416 73.3918 99.6859 76.1713 98.0581 77.4073C96.4296 78.6427 93.9831 77.5164 89.0892 75.2632L87.8234 74.6803C86.4322 74.0399 85.7374 73.7198 85 73.7198C84.2626 73.7198 83.5677 74.0399 82.1766 74.6803L80.9108 75.2632C76.0169 77.5164 73.5703 78.6427 71.9419 77.4073C70.3144 76.1713 70.5837 73.3918 71.1223 67.8322L71.2619 66.394C71.4149 64.8141 71.4914 64.0242 71.264 63.2917C71.0359 62.5593 70.5297 61.9673 69.5171 60.7832L68.5952 59.7052C65.0318 55.5384 63.2502 53.455 63.872 51.4556C64.4938 49.4561 67.1072 48.8648 72.3343 47.6822L73.6865 47.3762C75.1719 47.0402 75.9142 46.8721 76.5106 46.4195C77.107 45.9668 77.4895 45.2807 78.2538 43.9086L78.9501 42.6594Z" fill="#C8BFFF"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="starHiredd" viewBox="0 0 74 107" fill="none">
+                <path d="M39.1587 76.2826C36.7618 76.2504 34.3302 75.9387 31.9046 75.3243C15.2303 71.1009 5.13684 54.1598 9.36026 37.4856C9.79524 35.7683 10.3651 34.1209 11.0557 32.5516C10.8958 32.6427 10.7341 32.7229 10.5674 32.7937C9.379 33.2978 8.06652 33.2643 5.44157 33.1972L3.05175 33.1361C-6.18558 32.8999 -10.8042 32.7818 -12.6901 35.8607C-14.5759 38.9397 -12.4799 43.1763 -8.28792 51.6496L-7.20342 53.8418C-6.01221 56.2496 -5.41658 57.4536 -5.346 58.7743C-5.27538 60.0951 -5.73774 61.383 -6.66256 63.959L-7.5044 66.304C-10.7586 75.3685 -12.3857 79.9008 -10.188 82.6554C-7.99029 85.41 -3.42331 84.5631 5.71094 82.8686L8.07406 82.43C10.6695 81.9485 11.9672 81.708 13.1994 82.0201C14.4315 82.3322 15.4583 83.1615 17.5116 84.8204L19.381 86.3311C26.6071 92.1695 30.2202 95.0884 33.4645 93.7122C36.7085 92.3359 37.4349 87.5755 38.8883 78.0548L39.1587 76.2826Z" fill="#C8BFFF"/>
+                <path opacity="0.5" d="M16.237 27.5417L14.5442 29.3349C12.6848 31.3046 11.7551 32.2894 10.5667 32.7936C10.7335 32.7228 10.8952 32.6426 11.055 32.5515C10.3644 34.1208 9.7946 35.7682 9.35962 37.4855C5.13619 54.1597 15.2295 71.1007 31.9041 75.3243C34.3297 75.9386 36.7609 76.2502 39.1582 76.2825L39.2636 75.5918C39.6765 72.886 39.883 71.5334 40.5739 70.4055C41.2648 69.2776 42.3615 68.5023 44.5553 66.9519L46.5529 65.5403C54.2729 60.0843 58.133 57.3559 57.9401 53.7507C57.7473 50.1454 53.6295 48.0506 45.3935 43.8609L43.2629 42.777C40.9224 41.5864 39.7521 40.9911 38.9471 39.9821C38.1421 38.973 37.7932 37.6643 37.0958 35.047L36.4607 32.6641C34.0057 23.4536 32.7784 18.8484 29.4154 17.9966C26.0521 17.1447 22.7805 20.6104 16.237 27.5417Z" fill="#C8BFFF"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="smallStar" viewBox="0 0 31 31" fill="none">
+                <path d="M22.5963 16.0081C22.1563 16.4248 21.6607 16.7971 21.1128 17.1134C17.3464 19.2879 12.5304 17.9975 10.3559 14.2311C10.1319 13.8432 9.94473 13.4442 9.79321 13.0381C9.7803 13.0827 9.76514 13.1258 9.74739 13.168C9.62093 13.4689 9.37717 13.6942 8.88965 14.1449L8.44579 14.5552C6.73016 16.141 5.87235 16.9339 6.07344 17.8244C6.27455 18.7149 7.40136 19.1131 9.65497 19.9095L10.238 20.1156C10.8784 20.3419 11.1986 20.455 11.4443 20.682C11.69 20.9089 11.8332 21.2238 12.1198 21.8537L12.3807 22.427C13.3892 24.6435 13.8934 25.7517 14.7773 25.8634C15.6613 25.9751 16.3396 25.0164 17.6961 23.0988L18.047 22.6027C18.4325 22.0578 18.6253 21.7855 18.9036 21.6248C19.1819 21.4641 19.5142 21.4333 20.1788 21.372L20.7839 21.3161C23.1228 21.1001 24.2922 20.992 24.6375 20.1706C24.9827 19.3493 24.275 18.3585 22.8598 16.3769L22.5963 16.0081Z" fill="#C8BFFF"/>
+                <path opacity="0.5" d="M9.84872 11.2165L9.8581 11.84C9.86842 12.5247 9.87358 12.8671 9.74711 13.168C9.76486 13.1258 9.78002 13.0827 9.79293 13.0381C9.94446 13.4442 10.1317 13.8432 10.3556 14.2311C12.5301 17.9975 17.3461 19.2879 21.1126 17.1134C21.6604 16.7971 22.156 16.4249 22.5961 16.008L22.4934 15.8643C22.0912 15.3012 21.8901 15.0196 21.8165 14.6934C21.7428 14.3672 21.8049 14.0333 21.9291 13.3656L22.0422 12.7576C22.4792 10.4077 22.6977 9.23269 22.0271 8.61336C21.3565 7.99399 20.241 8.3404 18.0097 9.03326L17.4325 9.21248C16.7985 9.40938 16.4814 9.50784 16.1576 9.46691C15.8338 9.42598 15.5399 9.25033 14.952 8.89899L14.4168 8.57913C12.348 7.34284 11.3136 6.72468 10.554 7.16325C9.79428 7.60186 9.81245 8.80674 9.84872 11.2165Z" fill="#C8BFFF"/>
+                </svg>
+
+                <div class="premiumBoxTopHeadingdiv">
+                <span class="premiumBoxTopHeading">hireddd</span>
+                <span class="premiumBoxTopHeadingMini">PREMIUM</span>
+                <p class="premiumBoxTopHeadingdes">Earn badge, remove time limit on video resume, see who recently viewed your profile and more...</p>
+                <a href="" class="regButtonProfile margin60 margin-left">
+                  <div >
+                    Learn More
+                  </div>
+                </a>
+              </div>
+          </div>
+        </div>
+    </div>
+   
+  
+    
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const shortlistedNotificationCheckbox = document.getElementById('shortlistedNotificationCheckbox');
+  
+    shortlistedNotificationCheckbox.addEventListener('change', async () => {
+      const isShortlistedNotificationEnabled = shortlistedNotificationCheckbox.checked;
+  
+      try {
+        const response = await fetch('/user/settings/toggleShortlistedNotification', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ isShortlistedNotificationEnabled }),
+          credentials: 'include'
+        });
+  
+        if (response.ok) {
+          console.log('Shortlisted notification setting updated successfully.');
+        } else {
+          console.error('Failed to update shortlisted notification setting.');
+        }
+      } catch (error) {
+        console.error('Error updating shortlisted notification setting:', error);
+      }
+    });
+  });
+  </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const privacyToggle = document.getElementById('privacyToggle');
+  
+    privacyToggle.addEventListener('change', async () => {
+      const isPrivate = privacyToggle.checked;
+  
+      try {
+        const response = await fetch('/user/togglePrivacy', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+        
+          },
+          body: JSON.stringify({ isPrivate }),
+          credentials: 'include' 
+        });
+  
+        if (response.ok) {
+          console.log('Privacy setting updated successfully.');
+        } else {
+          console.error('Failed to update privacy setting.');
+        }
+      } catch (error) {
+        console.error('Error updating privacy setting:', error);
+      }
+    });
+  });
+  </script>
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+        const hideLikesAndSavedCheckbox = document.getElementById('hideLikesAndSavedCheckbox');
+
+        window.toggleHideLikesAndSaved = async () => {
+            const hideLikesAndSaved = hideLikesAndSavedCheckbox.checked;
+
+            try {
+                const response = await fetch('/user/settings/hideLikesAndSaved', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ hideLikesAndSaved }),
+                    credentials: 'include'
+                });
+
+                const data = await response.json(); // Assuming your server sends back JSON
+
+                if (response.ok) {
+                    console.log(data.message); // Or display this message on the page
+                } else {
+                    console.error('Failed to update likes and saved preferences.');
+                    // Optionally revert the checkbox state if update fails
+                    hideLikesAndSavedCheckbox.checked = !hideLikesAndSaved;
+                }
+            } catch (error) {
+                console.error('Error updating likes and saved preferences:', error);
+                // Revert the checkbox state in case of request failure
+                hideLikesAndSavedCheckbox.checked = !hideLikesAndSaved;
+            }
+        };
+    });
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const hideLocationCheckbox = document.getElementById('hideLocationCheckbox');
+
+  toggleHideLocation = async () => {
+    const hideLocation = hideLocationCheckbox.checked;
+
+    try {
+      const response = await fetch('/user/settings/hideLocation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ hideLocation }),
+        credentials: 'include'
+      });
+
+      if (response.ok) {
+        console.log('Location visibility preference updated successfully.');
+      } else {
+        console.error('Failed to update location visibility preference.');
+      }
+    } catch (error) {
+      console.error('Error updating location visibility preference:', error);
+    }
+  };
+});
+ 
+  </script>
+
+<script>
+
+    let currentSelected;
+  
+    // Set the initial color for the first SVG
+    document.getElementById("svg1").style.fill = "#5C47CD";
+    currentSelected = "svg1";
+  
+    function changeColor(element) {
+      const clickedId = element.querySelector('svg').id;
+  
+      if (currentSelected !== clickedId) {
+        // Reset color for the previously selected SVG
+        document.getElementById(currentSelected).style.fill = "#0E0D15";
+  
+        // Change color for the clicked SVG
+        element.querySelector('svg').style.fill = "#5C47CD";
+        currentSelected = clickedId;
+      }
+    }
+
+
+    // Latest notification work
+    
+  </script>
+  <script> 
+  function toggleNotification() {
+    var hideSvg = document.getElementById('hideSvg');
+    var showSvg = document.getElementById('showSvg');
+    hideSvg.style.display = 'none';
+    showSvg.style.display = 'block';
+    var hideSvgP = document.getElementById('hidePerson');
+    var showSvgP = document.getElementById('showPerson');
+    hideSvgP.style.display = 'none';
+    showSvgP.style.display = 'block';
+
+    // Add logic to hide other elements and show the notification div
+
+    // Example: hide accountPrefrenses
+    var accountPrefrensesDiv = document.getElementById('accountPrefrenses');
+    if (accountPrefrensesDiv) {
+        accountPrefrensesDiv.style.display = 'none';
+    }
+
+    // Example: show notification div
+    var notificationDiv = document.getElementById('NotificationsDiv');
+    if (notificationDiv) {
+        notificationDiv.style.display = 'flex';
+    }
+
+    // Add logic to change color
+    // ...
+
+    // Add logic to change back to the old SVG after some time
+  
+}
+function toggleAccount() {
+    var hideSvgP = document.getElementById('hidePerson');
+    var showSvgP = document.getElementById('showPerson');
+    hideSvgP.style.display = 'block';
+    showSvgP.style.display = 'none';
+    var hideSvg = document.getElementById('hideSvg');
+    var showSvg = document.getElementById('showSvg');
+    hideSvg.style.display = 'block';
+    showSvg.style.display = 'none';
+    // Add logic to hide other elements and show the notification div
+
+    // Example: hide accountPrefrenses
+    var accountPrefrensesDiv = document.getElementById('accountPrefrenses');
+    if (accountPrefrensesDiv) {
+        accountPrefrensesDiv.style.display = 'flex';
+    }
+
+    // Example: show notification div
+    var notificationDiv = document.getElementById('NotificationsDiv');
+    if (notificationDiv) {
+        notificationDiv.style.display = 'none';
+    }
+
+    // Add logic to change color
+    // ...
+
+    // Add logic to change back to the old SVG after some time
+    var accountPrefrensesDiv = document.getElementById('accountPrefrenses');
+    if (accountPrefrensesDiv) {
+        accountPrefrensesDiv.style.display = 'flex';
+    }
+
+    // Example: show notification div
+    var notificationDiv = document.getElementById('NotificationsDiv');
+    if (notificationDiv) {
+        notificationDiv.style.display = 'none';
+    }
+}
+    </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const likedNotificationCheckbox = document.getElementById('likedNotificationCheckbox');
+    
+      toggleLikedNotification = async () => {
+        const isLikedNotificationEnabled = likedNotificationCheckbox.checked;
+    
+        try {
+          const response = await fetch('/user/settings/toggleLikedNotification', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ isLikedNotificationEnabled }),
+            credentials: 'include'
+          });
+    
+          if (response.ok) {
+            console.log('Liked notification setting updated successfully.');
+          } else {
+            console.error('Failed to update liked notification setting.');
+          }
+        } catch (error) {
+          console.error('Error updating liked notification setting:', error);
+        }
+      };
+    });
+    </script>
+</html>

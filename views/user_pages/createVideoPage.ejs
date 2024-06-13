@@ -1,0 +1,32 @@
+<%-include('../partials/head', {title: "Create Video"}) %>
+<%-include('../partials/navbarUpload') %>
+
+<%- include('../partials/flash') %>
+  <div class="startRecordingScreen">
+  
+    <h1 class="recordingStartHeading"  id="recordingStatus">Start Recording</h1>
+  
+    <div id="liveVideoFeed" >
+    <video id="recorded-video" controls ></video>
+    </div>
+    <div class="record-time">
+      <p class="recordTimeText"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path fill="#868686" d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 11h6v1h-7v-9h1v8z"/></svg> &nbsp;  Record time</p>
+      <p id="timer">01:00 minute</p>
+    </div>
+    <button id="start-recording-button">Start Recording</button>
+    <span>
+    <button id="reviewButton" style="display: none;"><svg fill="#868686" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 4px;" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 489.645 489.645" xml:space="preserve" transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M460.656,132.911c-58.7-122.1-212.2-166.5-331.8-104.1c-9.4,5.2-13.5,16.6-8.3,27c5.2,9.4,16.6,13.5,27,8.3 c99.9-52,227.4-14.9,276.7,86.3c65.4,134.3-19,236.7-87.4,274.6c-93.1,51.7-211.2,17.4-267.6-70.7l69.3,14.5 c10.4,2.1,21.8-4.2,23.9-15.6c2.1-10.4-4.2-21.8-15.6-23.9l-122.8-25c-20.6-2-25,16.6-23.9,22.9l15.6,123.8 c1,10.4,9.4,17.7,19.8,17.7c12.8,0,20.8-12.5,19.8-23.9l-6-50.5c57.4,70.8,170.3,131.2,307.4,68.2 C414.856,432.511,548.256,314.811,460.656,132.911z"></path> </g> </g></svg>  Re-record</button>
+ 
+    <!-- <form action="/save-video" method="post" enctype="multipart/form-data" id="videoForm"> -->
+      <button type="submit" id="uploadButton" style="display: none;">Save</button>
+    <!-- </form> -->
+    </span>
+    <!-- <form action="/upload-video" method="post" enctype="multipart/form-data"> 
+      <label for="video">Select a Video:</label>
+      <input type="file" id="video" name="video" accept="video/*">
+      <button type="submit">Upload Video</button>
+    </form> -->
+  </div>
+  <script src="/javascript/videorecord.js"></script>
+  <%-include('../partials/footer') %>
+  <%-include('../partials/body') %>

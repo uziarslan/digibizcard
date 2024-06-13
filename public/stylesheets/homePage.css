@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    overflow-x: hidden;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.sponsorshipButton {
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    color: #A5A5A5;
+    margin-right: 15px;
+}
+
+.exclusivePerks {
+    display: inline;
+    background: transparent;
+    border: none;
+    color: #27945F;
+    text-decoration: underline;
+}
+
+.containerEnclosed {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5px;
+
+    margin-left: 150px;
+    margin-right: 150px;
+    justify-content: center;
+
+}
+
+.inludeText {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.greenSmallDiv {
+    background-color: #26945e;
+    width: 14px;
+    height: 15px;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.pageChange {
+    margin-top: 15px;
+}
+
+.pageChange a {
+    text-decoration: none;
+    color: #26945e;
+}
+
+.myStory {
+    color: #26945e;
+}
+
+.formSignup,
+.formSignIn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signUpHeading {
+    text-align: center;
+    margin-top: 26px;
+    margin-bottom: 16px;
+}
+
+.container {
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+    background-color: #d7e9d9
+}
+
+.containerImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainSignupDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+}
+
+.logoImgSignup {
+    width: 252px;
+    height: 75px;
+    margin-bottom: 27px;
+
+
+}
+
+.top {
+    margin: 0px auto 22px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 108px;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.ourrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-right: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.topButton {
+    background-color: #26945e;
+    color: #fff;
+    width: 80px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+.topLogo {
+    width: 252px;
+    height: 75px;
+}
+
+.signUpBox {
+    width: 546px;
+    max-width: 624px;
+    height: auto;
+    background-color: white;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.btn-no-outline.btn {
+    border: none;
+}
+
+.btn-no-outline.btn:focus,
+.btn-no-outline.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.input-field {
+    display: block;
+    width: 100%;
+    padding-bottom: 13px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+    margin-top: 40px;
+}
+
+.signUpButton,
+.signInButton {
+    width: 100%;
+    height: 55px;
+    color: white;
+    background-color: #26945e;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 20px;
+    font-weight: '400';
+}
+
+.topParaText {
+    max-width: 1016px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.secondHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+}
+
+.emptyDiv {
+    width: 132px;
+}
+
+.centeredElement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #F2F7E8;
+    padding: 10px 16px;
+    border-radius: 999px;
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #60B527;
+    margin-right: 9px;
+}
+
+.centeredElementText {
+    margin: 0;
+}
+
+.pixelsLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+/* Define the basic styles for the circle */
+.heartbeat-circle {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    animation: heartbeat 1s infinite;
+}
+
+.totalpixel {
+    margin: 0;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.myrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Custom styling for the file input */
+.form-control.visually-hidden {
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.choosePixelColor {
+    margin: 18px 0;
+    color: #BDBDBD;
+    font-size: 16px;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.form-control {
+    height: 54px;
+}
+
+.popover-arrow::before {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.popover {
+    background-color: #81AC86;
+}
+
+.popover-body {
+    color: white;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popover-arrow::after {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.custom-popover {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-popover .popover-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    /* padding: 10px; */
+    z-index: 1;
+    bottom: 100%;
+    width: 260px;
+    left: 50%;
+    height: 33px;
+    transform: translateX(-50%);
+    background-color: #81AC86;
+    color: white;
+    font-size: 12px;
+    width: 152px;
+    height: 33px;
+    flex-shrink: 0;
+
+}
+
+.custom-popover:hover .popover-content {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.divTick {
+    border-radius: 28px;
+    border: 6px solid rgba(213, 244, 216, 0.24);
+    background: rgba(213, 244, 216, 0.70);
+    mix-blend-mode: multiply;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.exclusiveHeading {
+    color: #000000;
+    /* Text lg / Semibold */
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    /* 155.556% */
+    margin-bottom: 4px;
+
+}
+
+.miniheadingExclusive {
+    color: #344054;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 0;
+}
+
+.exclusiveLine {
+    color: var(--gray-600, #475467);
+    /* Text sm / Regular */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 0;
+    /* 142.857% */
+}
+
+.marginCustom {
+    margin-bottom: 20px;
+}
+
+/* Define the heartbeat animation */
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+
+@media (max-width:671px) {
+    .emptyDiv {
+        width: 0;
+        height: 0;
+    }
+
+    .secondHeading {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pixelsLeft {
+        margin-top: 15px;
+    }
+
+    .signUpBox {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px;
+    }
+
+    .container {
+        position: relative;
+        height: 20px;
+        width: 20px;
+        background-color: #d7e9d9
+    }
+}
+
+/* Pixel k uper hover ka css code yeh hai */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 8px;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.customHidden {
+    display: none;
+}
+
+/* Yahan par khatam horha hai */
+.afterSignin {
+    width: 202px !important;
+}
+
+.modal-header .btn-close {
+
+    padding: calc(var(--bs-modal-header-padding-y) * 1) calc(var(--bs-modal-header-padding-x) * 1);
+
+}
+
+/* Style for the main container div */
+#main-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    /* Set 35 columns */
+    gap: 2px;
+    /* Adjust the gap between inner divs as needed */
+}
+
+/* Style for each inner div */
+.inner-div {
+    width: 100%;
+    padding-top: 100%;
+    background-color: #d7e9d9;
+    /* Optional: Add a background color for better visibility */
+    box-sizing: border-box;
+    /* background-image: url('/images/images.jpeg'); */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+}
+
+/* Optional: Add some responsiveness with media queries */
+@media (max-width: 600px) {
+    #main-container {
+        gap: 2px;
+    }
+
+    .topParaText {
+        font-size: 15px;
+    }
+
+    .totalgoal {
+        font-size: 15px;
+    }
+
+    .topLogo {
+        width: 120px;
+        height: 40px;
+        margin-top: 15px;
+    }
+
+    .myrow {
+        margin-top: 5px;
+    }
+
+    .btn-success {
+        height: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    #main-container {
+        gap: 2px;
+    }
+}
+
+.btnfixed:hover .cube {
+    display: block !important;
+}
+
+.btnfixed {
+    border: none !important;
+    outline: none !important;
+    margin: 0 !important;
+
+    background-color: #d7e9d9 !important;
+    position: relative;
+    /* box-sizing: border-box !important; */
+}
+
+.btnfixed:focus {
+    border: none !important;
+    outline: none !important;
+    margin: 0 !important;
+    /* box-sizing: border-box !important; */
+}
+
+.imageinnerdiv {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sponsorshipModalHeader {
+    padding: 18px 8px 0 8px;
+}
+
+.sponsorshipModalContent {
+    width: 400px;
+    border-radius: 12px;
+}
+
+.sponsorshipModalContent {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.form-check {
+    margin-bottom: 12px;
+}
+
+.form-check p {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.reachoutButton {
+    background-color: #26945e !important;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid #27945F;
+    background: #27945F;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.exclusiveModalHeader {
+    padding: 24px 24px 0 24px;
+}
+
+.exclusiveModalContent {
+    width: 480px;
+    border-radius: 12px;
+}
+
+.exclusiveModalBody {
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+.descriptionTab {
+    padding: 16px !important;
+    margin-bottom: 12px !important;
+    gap: 15px !important;
+    border-radius: 12px;
+}
+
+.exclusiveModalBuyButton {
+    background-color: #26945e !important;
+    border-radius: 8px;
+    border: 1px solid #27945F;
+    background: #27945F;
+    width: 100%;
+    padding: 10px 18px;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+}
+
+.customMargin {
+    margin-bottom: 20px;
+}

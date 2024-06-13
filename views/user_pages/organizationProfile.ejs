@@ -1,0 +1,156 @@
+<%-include('../partials/head', {title: "Create Your Profile"}) %>
+<%-include('../partials/organizationNavbar') %> <%- include('../partials/flash') %>
+<div class="row">
+  <div class="logincolumn">
+    <h3 class="loginformheading">Create Your Profile</h3>
+
+    <div class="form-container">
+      <div class="form-inner">
+        <form
+          action="/organization/profile"
+          method="post"
+          enctype="multipart/form-data"
+          class="login"
+        >
+          <div class="rowfield">
+            <div class="columnfield">
+              <div class="uploadimg" id="imagePreviewContainer">
+                <svg
+                  id="svghide"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <path
+                    d="M32.5 8.75H28.1688L26.0391 5.55625C25.925 5.38524 25.7704 5.245 25.5892 5.14798C25.408 5.05095 25.2056 5.00012 25 5H15C14.7944 5.00012 14.592 5.05095 14.4108 5.14798C14.2296 5.245 14.075 5.38524 13.9609 5.55625L11.8297 8.75H7.5C6.50544 8.75 5.55161 9.14509 4.84835 9.84835C4.14509 10.5516 3.75 11.5054 3.75 12.5V30C3.75 30.9946 4.14509 31.9484 4.84835 32.6517C5.55161 33.3549 6.50544 33.75 7.5 33.75H32.5C33.4946 33.75 34.4484 33.3549 35.1517 32.6517C35.8549 31.9484 36.25 30.9946 36.25 30V12.5C36.25 11.5054 35.8549 10.5516 35.1517 9.84835C34.4484 9.14509 33.4946 8.75 32.5 8.75ZM33.75 30C33.75 30.3315 33.6183 30.6495 33.3839 30.8839C33.1495 31.1183 32.8315 31.25 32.5 31.25H7.5C7.16848 31.25 6.85054 31.1183 6.61612 30.8839C6.3817 30.6495 6.25 30.3315 6.25 30V12.5C6.25 12.1685 6.3817 11.8505 6.61612 11.6161C6.85054 11.3817 7.16848 11.25 7.5 11.25H12.5C12.7058 11.2501 12.9085 11.1994 13.0901 11.1024C13.2716 11.0054 13.4264 10.865 13.5406 10.6938L15.6687 7.5H24.3297L26.4594 10.6938C26.5736 10.865 26.7284 11.0054 26.9099 11.1024C27.0915 11.1994 27.2942 11.2501 27.5 11.25H32.5C32.8315 11.25 33.1495 11.3817 33.3839 11.6161C33.6183 11.8505 33.75 12.1685 33.75 12.5V30ZM26.25 21.25C26.25 21.5815 26.1183 21.8995 25.8839 22.1339C25.6495 22.3683 25.3315 22.5 25 22.5H21.25V26.25C21.25 26.5815 21.1183 26.8995 20.8839 27.1339C20.6495 27.3683 20.3315 27.5 20 27.5C19.6685 27.5 19.3505 27.3683 19.1161 27.1339C18.8817 26.8995 18.75 26.5815 18.75 26.25V22.5H15C14.6685 22.5 14.3505 22.3683 14.1161 22.1339C13.8817 21.8995 13.75 21.5815 13.75 21.25C13.75 20.9185 13.8817 20.6005 14.1161 20.3661C14.3505 20.1317 14.6685 20 15 20H18.75V16.25C18.75 15.9185 18.8817 15.6005 19.1161 15.3661C19.3505 15.1317 19.6685 15 20 15C20.3315 15 20.6495 15.1317 20.8839 15.3661C21.1183 15.6005 21.25 15.9185 21.25 16.25V20H25C25.3315 20 25.6495 20.1317 25.8839 20.3661C26.1183 20.6005 26.25 20.9185 26.25 21.25Z"
+                    fill="#868E96"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="columnfield">
+              <div class="custom-file-container">
+                <label for="fileUpload" class="file-upload"
+                  >Upload Image
+                  <input
+                    id="fileUpload"
+                    type="file"
+                    name="profilePicture"
+                    accept="image/*"
+                    onchange="previewImage()"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+          <p class="UploadPictureOptional">Upload Your Picture (Optional)</p>
+          <div class="field">
+            <label class="inputLable" for="firstName">Organization Name</label>
+            <input
+              type="text"
+              placeholder="Enter Name"
+              name="orgName"
+              required
+            />
+          </div>
+          <div class="field">
+            <label class="inputLable" for="location">Location</label>
+            
+            <select
+              name="location"
+              id="location"
+              class="form-control inputprofile optionprofile"
+            >
+              <option value="" disabled selected>Location</option>
+              <option value="Lahore" class="optionprofile">Lahore</option>
+              <option value="Karachi" class="optionprofile">Karachi</option>
+              <option value="Islamabad" class="optionprofile">Islamabad</option>
+              <option value="Multan" class="optionprofile">Multan</option>
+              <option value="Faislabad" class="optionprofile">Faislabad</option>
+              <option value="Sialkot" class="optionprofile">Sialkot</option>
+              <option value="Peshawar" class="optionprofile">Peshawar</option>
+              <option value="Quetta" class="optionprofile">Quetta</option>
+              <option value="HyderAbad" class="optionprofile">HyderAbad</option>
+              <option value="Rawalpindi" class="optionprofile">
+                Rawalpindi
+              </option>
+              <option value="Gujranwala" class="optionprofile">
+                Gujranwala
+              </option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="inputLable" for="industry">Industry</label>
+            <select
+              name="industry"
+              id="industry"
+              class="form-control inputprofile optionprofile"
+            >
+              <option value="" disabled selected>Industry / Fields</option>
+              <option value="Developer" class="optionprofile">Developer</option>
+              <option value="Designer" class="optionprofile">Designer</option>
+              <option value="Sales" class="optionprofile">
+                Sales & Marketing
+              </option>
+              <option value="Others" class="optionprofile">Others</option>
+            </select>
+            </div>
+            <div class="field">
+              <label class="inputLable" for="organizationSize">Organization Size</label>
+              <select name="orgSize" id="orgSize" class="form-control inputprofile optionprofile">
+                <option value="" disabled selected>1 - 1000</option>
+                <option value="Less than 10" class="optionprofile">Less than 10</option>
+                <option value="10-50" class="optionprofile">10-50</option>
+                <option value="50-100" class="optionprofile">50- 100</option>
+                <option value="200-300" class="optionprofile">200- 300</option>
+                <option value="300-500" class="optionprofile">300- 500</option>
+                <option value="More than 500" class="optionprofile">More than 500</option>
+            </select>
+            </div>
+         
+          
+            <div class="field" style="min-height: 142px;">
+              <label class="inputLable" for="about">About</label>
+              <textarea class="inputprofileabout optionprofile" name="about" id="about" rows="3"  placeholder="Share a professional summary about your organization..." name="about" required></textarea>
+            </div>
+        
+            <div class="field btn mb-3">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Submit">
+            </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./script.js"></script>
+
+
+<script>
+  function previewImage() {
+    var input = document.getElementById("fileUpload");
+    var preview = document.getElementById("imagePreviewContainer");
+    var svghide = document.getElementById("svghide");
+
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        preview.style.backgroundImage = "url('" + e.target.result + "')";
+        svghide.style.display = "none";
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  const loginText = document.querySelector(".title-text .login");
+  const loginForm = document.querySelector("form.login");
+  const loginBtn = document.querySelector("label.login");
+  const signupBtn = document.querySelector("label.signup");
+  const signupLink = document.querySelector("form .signup-link a");
+</script>
+<%-include('../partials/body') %>

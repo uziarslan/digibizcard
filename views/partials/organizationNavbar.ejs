@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="navWrapper">
+      <img class="logo" src="/images/Navlogo.png" />
+      <div class="buttonWrapper">
+        <a href="#" class="employee">Find Employees</a>
+        <a href="#" class="employee">For Employees</a>
+        <% if(!organization ) { %>
+        <a href="/user/login" class="loginButton">Login</a>
+        <a href="/user/signup" class="registerButton">Register</a>
+        <% } else { %>
+          <a href="/user/logout" class="registerButton">Logout</a>
+       <% } %>
+      </div>
+    </div>
+  </nav>
+  

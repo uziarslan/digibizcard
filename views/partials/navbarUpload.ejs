@@ -1,0 +1,375 @@
+<nav class="navbar">
+  <div class="navWrapper">
+    <img class="logo" src="/images/Navlogo.png" />
+    <div class="searchDiv">
+      <form action="/searchUsers" method="GET" id="formseach">
+        <input type="text" name="query" class="seachbaruploadnav" placeholder="Search">
+        <button style="display: none;" type="submit">Search</button>
+      </form>
+
+      <svg class="searchIcon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+        <g opacity="0.7">
+          <path
+            d="M22.0308 20.9696L17.3368 16.2765C18.6973 14.6431 19.3757 12.548 19.2309 10.4272C19.0861 8.30629 18.1293 6.32289 16.5593 4.88956C14.9894 3.45623 12.9274 2.68333 10.8021 2.73163C8.67687 2.77993 6.65205 3.64571 5.14888 5.14888C3.64571 6.65205 2.77993 8.67687 2.73163 10.8021C2.68333 12.9274 3.45623 14.9894 4.88956 16.5593C6.32289 18.1293 8.30629 19.0861 10.4272 19.2309C12.548 19.3757 14.6431 18.6973 16.2765 17.3368L20.9696 22.0308C21.0393 22.1005 21.122 22.1558 21.213 22.1935C21.3041 22.2312 21.4017 22.2506 21.5002 22.2506C21.5988 22.2506 21.6963 22.2312 21.7874 22.1935C21.8784 22.1558 21.9612 22.1005 22.0308 22.0308C22.1005 21.9612 22.1558 21.8784 22.1935 21.7874C22.2312 21.6963 22.2506 21.5988 22.2506 21.5002C22.2506 21.4017 22.2312 21.3041 22.1935 21.213C22.1558 21.122 22.1005 21.0393 22.0308 20.9696ZM4.25021 11.0002C4.25021 9.66519 4.64609 8.36015 5.38779 7.25011C6.12949 6.14008 7.1837 5.27492 8.4171 4.76403C9.6505 4.25314 11.0077 4.11946 12.3171 4.37991C13.6264 4.64036 14.8292 5.28324 15.7732 6.22724C16.7172 7.17125 17.3601 8.37398 17.6205 9.68335C17.881 10.9927 17.7473 12.3499 17.2364 13.5833C16.7255 14.8167 15.8603 15.8709 14.7503 16.6126C13.6403 17.3543 12.3352 17.7502 11.0002 17.7502C9.21061 17.7482 7.49488 17.0364 6.22944 15.771C4.964 14.5056 4.2522 12.7898 4.25021 11.0002Z"
+            fill="#5C47CD" />
+        </g>
+      </svg>
+
+      <svg data-toggle="modal" data-target="#myModal2" class="filterIcon" xmlns="http://www.w3.org/2000/svg" width="25"
+        height="25" viewBox="0 0 25 25" fill="none">
+        <path
+          d="M22.1197 5.14346C22.0043 4.87675 21.813 4.64986 21.5696 4.49101C21.3263 4.33216 21.0416 4.24836 20.751 4.25002H4.25095C3.96064 4.2506 3.67673 4.3354 3.43366 4.49416C3.1906 4.65291 2.99883 4.87879 2.88161 5.14438C2.76439 5.40998 2.72677 5.70389 2.7733 5.99045C2.81984 6.27701 2.94853 6.54391 3.14376 6.75877L3.15126 6.76721L9.50095 13.5472V20.75C9.50089 21.0215 9.5745 21.2879 9.71395 21.5208C9.85339 21.7538 10.0534 21.9445 10.2928 22.0727C10.5321 22.2008 10.8017 22.2617 11.0729 22.2486C11.344 22.2356 11.6066 22.1493 11.8325 21.9988L14.8325 19.9981C15.0382 19.8612 15.2068 19.6755 15.3234 19.4576C15.44 19.2398 15.501 18.9965 15.501 18.7494V13.5472L21.8516 6.76721L21.8591 6.75877C22.0564 6.54489 22.1863 6.27764 22.2327 5.99037C22.279 5.7031 22.2397 5.40854 22.1197 5.14346ZM14.4078 12.5263C14.1473 12.8024 14.0018 13.1675 14.001 13.5472V18.7494L11.001 20.75V13.5472C11.0018 13.1662 10.8569 12.7992 10.596 12.5216L4.25095 5.75002H20.751L14.4078 12.5263Z"
+          fill="#5C47CD" />
+      </svg>
+
+    </div>
+
+    <div class="buttonWrapper">
+      <a data-toggle="modal" data-target="#myModal3">
+        <img src="/images/Notification.svg" class="navbarbellIcon" alt="">
+        <span id="notificationCounter" class="notification-counter">0</span>
+      </a>
+      <a href="/user/profile" class="UploadBtn">+ Upload</a>
+      <img src="/images/view1.png" class="navbarProfileImage" alt="">
+
+
+    </div>
+    <div class="hiddenNv">
+
+      <a href="/chat"> <svg id="svg4" class="msgResponsiv" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none">
+          <path
+            d="M20.25 4.5H3.75003C3.3522 4.5 2.97067 4.65804 2.68937 4.93934C2.40806 5.22064 2.25003 5.60218 2.25003 6V21C2.2483 21.286 2.32921 21.5665 2.48305 21.8076C2.63689 22.0488 2.8571 22.2404 3.11721 22.3594C3.31543 22.4517 3.53138 22.4997 3.75003 22.5C4.10215 22.4992 4.4426 22.3736 4.71096 22.1456C4.71544 22.1427 4.71953 22.1392 4.72315 22.1353L7.7344 19.5H20.25C20.6478 19.5 21.0294 19.342 21.3107 19.0607C21.592 18.7794 21.75 18.3978 21.75 18V6C21.75 5.60218 21.592 5.22064 21.3107 4.93934C21.0294 4.65804 20.6478 4.5 20.25 4.5ZM20.25 18H7.7344C7.38117 17.9998 7.03922 18.1243 6.76877 18.3516L6.75753 18.3619L3.75003 21V6H20.25V18Z" />
+        </svg>
+        <svg id="chatFill" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M21.75 6V18C21.75 18.3978 21.592 18.7794 21.3107 19.0607C21.0294 19.342 20.6478 19.5 20.25 19.5H7.7344L4.7269 22.1353C4.72328 22.1392 4.71919 22.1427 4.71471 22.1456C4.44537 22.3744 4.10344 22.5 3.75003 22.5C3.52997 22.4996 3.31268 22.451 3.11346 22.3575C2.85434 22.2381 2.63511 22.0465 2.48198 21.8058C2.32886 21.5651 2.24833 21.2853 2.25003 21V6C2.25003 5.60218 2.40806 5.22064 2.68937 4.93934C2.97067 4.65804 3.3522 4.5 3.75003 4.5H20.25C20.6478 4.5 21.0294 4.65804 21.3107 4.93934C21.592 5.22064 21.75 5.60218 21.75 6Z"
+            fill="#5C47CD" />
+        </svg>
+      </a>
+      <svg data-toggle="modal" data-target="#myModal11" class="hamburger" viewBox="0 0 100 80" width="40" height="40">
+        <rect width="65" height="5" rx="10"></rect>
+        <rect y="20" width="65" height="5" rx="10"></rect>
+        <rect y="40" width="65" height="5" rx="10"></rect>
+      </svg>
+    </div>
+
+  </div>
+</nav>
+
+<div class="modal" id="myModal11">
+  <div class="hamburgerDiv">
+    <a href="/user/settings">
+      <div class="hamburgerMenue">
+        <svg viewBox="0 -3.5 21 21" width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <title>settings [#1389]</title>
+            <desc>Created with Sketch.</desc>
+            <defs> </defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="#212529        " fill-rule="evenodd">
+              <g id="Dribbble-Light-Preview" transform="translate(-99.000000, -760.000000)" fill="#212529">
+                <g id="icons" transform="translate(56.000000, 160.000000)">
+                  <path
+                    d="M53.5,603 C53.5,602.647 53.5756,602 53.6932,602 L43,602 L43,604 L53.6932,604 C53.5756,604 53.5,603.353 53.5,603 L53.5,603 Z M61.7068,602 C61.27315,601 60.1192,600 58.75,600 C57.01015,600 55.6,601.343 55.6,603 C55.6,604.657 57.01015,606 58.75,606 C60.1192,606 61.27315,605 61.7068,604 L64,604 L64,602 L61.7068,602 Z M53.5,611 C53.5,611.353 53.4244,611.686 53.3068,612 L64,612 L64,610 L53.3068,610 C53.4244,610 53.5,610.647 53.5,611 L53.5,611 Z M51.4,611 C51.4,612.657 49.98985,614 48.25,614 C46.8808,614 45.72685,613 45.2932,612 L43,612 L43,610 L45.2932,610 C45.72685,609 46.8808,608 48.25,608 C49.98985,608 51.4,609.343 51.4,611 L51.4,611 Z"
+                    id="settings-[#1389]"> </path>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+
+        <p>Setting</p>
+      </div>
+    </a>
+    <a href="/likedVideos">
+      <div class="hamburgerMenue">
+        <svg id="svg2" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M21.9375 7.51125C21.7263 7.27193 21.4666 7.08028 21.1757 6.94903C20.8847 6.81778 20.5692 6.74994 20.25 6.75H15V5.25C15 4.25544 14.6049 3.30161 13.9017 2.59835C13.1984 1.89509 12.2446 1.5 11.25 1.5C11.1107 1.4999 10.9741 1.53862 10.8555 1.61181C10.7369 1.685 10.6411 1.78977 10.5787 1.91438L7.03687 9H3C2.60218 9 2.22064 9.15804 1.93934 9.43934C1.65804 9.72064 1.5 10.1022 1.5 10.5V18.75C1.5 19.1478 1.65804 19.5294 1.93934 19.8107C2.22064 20.092 2.60218 20.25 3 20.25H19.125C19.6732 20.2502 20.2025 20.0503 20.6137 19.6878C21.0249 19.3253 21.2896 18.8251 21.3581 18.2812L22.4831 9.28125C22.523 8.9644 22.495 8.64268 22.4009 8.3375C22.3068 8.03232 22.1488 7.75066 21.9375 7.51125ZM3 10.5H6.75V18.75H3V10.5ZM20.9944 9.09375L19.8694 18.0938C19.8465 18.275 19.7583 18.4418 19.6212 18.5626C19.4842 18.6834 19.3077 18.7501 19.125 18.75H8.25V9.92719L11.6916 3.04313C12.2016 3.14521 12.6606 3.4209 12.9903 3.82326C13.32 4.22562 13.5001 4.7298 13.5 5.25V7.5C13.5 7.69891 13.579 7.88968 13.7197 8.03033C13.8603 8.17098 14.0511 8.25 14.25 8.25H20.25C20.3564 8.24996 20.4616 8.27258 20.5587 8.31634C20.6557 8.36011 20.7423 8.42402 20.8127 8.50383C20.8831 8.58363 20.9357 8.67752 20.967 8.77923C20.9984 8.88094 21.0077 8.98816 20.9944 9.09375Z" />
+        </svg>
+        <p class="homeOptionText">Liked</p>
+      </div>
+    </a>
+    <a href="/savedVideos">
+      <div class="hamburgerMenue">
+        <svg id="svg3" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M17.25 3H6.75C6.35218 3 5.97064 3.15804 5.68934 3.43934C5.40804 3.72064 5.25 4.10217 5.25 4.5V21C5.25007 21.1338 5.28595 21.2652 5.35393 21.3805C5.42191 21.4958 5.5195 21.5908 5.63659 21.6557C5.75367 21.7206 5.88598 21.7529 6.01978 21.7494C6.15358 21.7458 6.284 21.7066 6.3975 21.6356L12 18.1341L17.6034 21.6356C17.7169 21.7063 17.8472 21.7454 17.9809 21.7488C18.1146 21.7522 18.2467 21.7198 18.3636 21.655C18.4806 21.5902 18.5781 21.4952 18.646 21.3801C18.7139 21.2649 18.7498 21.1337 18.75 21V4.5C18.75 4.10217 18.592 3.72064 18.3107 3.43934C18.0294 3.15804 17.6478 3 17.25 3ZM17.25 19.6472L12.3966 16.6144C12.2774 16.5399 12.1396 16.5004 11.9991 16.5004C11.8585 16.5004 11.7208 16.5399 11.6016 16.6144L6.75 19.6472V4.5H17.25V19.6472Z" />
+        </svg>
+        <p class="homeOptionText">Shortlisted Video resumes</p>
+      </div>
+    </a>
+    <div class="hamburgerMenue">
+      <svg viewBox="0 0 24 24" width="24px" height="24px" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M21.593 10.943c.584.585.584 1.53 0 2.116L18.71 15.95c-.39.39-1.03.39-1.42 0a.996.996 0 0 1 0-1.41 9.552 9.552 0 0 1 1.689-1.345l.387-.242-.207-.206a10 10 0 0 1-2.24.254H8.998a1 1 0 1 1 0-2h7.921a10 10 0 0 1 2.24.254l.207-.206-.386-.241a9.562 9.562 0 0 1-1.69-1.348.996.996 0 0 1 0-1.41c.39-.39 1.03-.39 1.42 0l2.883 2.893zM14 16a1 1 0 0 0-1 1v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1.505a1 1 0 1 0 2 0V5.5A2.5 2.5 0 0 0 12.5 3h-7A2.5 2.5 0 0 0 3 5.5v13A2.5 2.5 0 0 0 5.5 21h7a2.5 2.5 0 0 0 2.5-2.5V17a1 1 0 0 0-1-1z"
+            fill="#000000"></path>
+        </g>
+      </svg>
+      <p class="homeOptionText">Logout</p>
+    </div>
+  </div>
+</div>
+<div class="modal" id="myModal2">
+  <div class="modal-dialog">
+    <div class="modal-content filterdiv">
+      <!-- Modal Body -->
+      <div class="modal-body position-relative">
+        <svg data-dismiss="modal" class="filterclose" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none">
+          <path
+            d="M19.281 18.2194C19.3507 18.2891 19.406 18.3718 19.4437 18.4629C19.4814 18.5539 19.5008 18.6515 19.5008 18.7501C19.5008 18.8486 19.4814 18.9462 19.4437 19.0372C19.406 19.1283 19.3507 19.211 19.281 19.2807C19.2114 19.3504 19.1286 19.4056 19.0376 19.4433C18.9465 19.4811 18.849 19.5005 18.7504 19.5005C18.6519 19.5005 18.5543 19.4811 18.4632 19.4433C18.3722 19.4056 18.2895 19.3504 18.2198 19.2807L12.0004 13.0604L5.78104 19.2807C5.64031 19.4214 5.44944 19.5005 5.25042 19.5005C5.05139 19.5005 4.86052 19.4214 4.71979 19.2807C4.57906 19.1399 4.5 18.9491 4.5 18.7501C4.5 18.551 4.57906 18.3602 4.71979 18.2194L10.9401 12.0001L4.71979 5.78068C4.57906 5.63995 4.5 5.44907 4.5 5.25005C4.5 5.05103 4.57906 4.86016 4.71979 4.71943C4.86052 4.5787 5.05139 4.49963 5.25042 4.49963C5.44944 4.49963 5.64031 4.5787 5.78104 4.71943L12.0004 10.9397L18.2198 4.71943C18.3605 4.5787 18.5514 4.49963 18.7504 4.49963C18.9494 4.49963 19.1403 4.5787 19.281 4.71943C19.4218 4.86016 19.5008 5.05103 19.5008 5.25005C19.5008 5.44907 19.4218 5.63995 19.281 5.78068L13.0607 12.0001L19.281 18.2194Z"
+            fill="#212529" />
+        </svg>
+        <form action="/filterUsers" method="POST" id="filterForm">
+          <p class="filterbyheading">Filter By</p>
+          <div class="filterrow">
+            <div class="filtercolumn">
+              <p class="filtercolumnheading">Industry</p>
+              <div class="flex-div">
+
+                <input class="checkboxfilters" name="industry" value="Development" type="checkbox"> <span
+                  class="checkboxheading">Development</span> <br>
+              </div>
+              <div class="flex-div">
+
+                <input class="checkboxfilters" name="industry" value="Designing" type="checkbox"> <span
+                  class="checkboxheading">Designing</span> <br>
+              </div>
+              <div class="flex-div">
+
+                <input class="checkboxfilters" name="industry" value="Sales & Marketing" type="checkbox"> <span
+                  class="checkboxheading">Sales & Marketing</span>
+                <br>
+              </div>
+              <div class="flex-div">
+
+                <input class="checkboxfilters" type="checkbox" name="industry" value="Other"> <span
+                  class="checkboxheading">Other</span> <br>
+              </div>
+
+              <div class="Likedresumesdiv">
+                <p class="filtercolumnheading">Liked resumes</p>
+                <div class="flex-div">
+                  <input class="checkboxfilters radiotrue" type="radio" name="liked" value="mostLiked" id="options1">
+                  <label for="options1" class="checkboxheading">Most liked</label>
+                  <br>
+                </div>
+                <div class="flex-div">
+                  <input class="checkboxfilters radiotrue" type="radio" name="liked" value="leastLiked" id="options2">
+                  <label for="options2" class="checkboxheading">Least liked</label>
+                  <br>
+                </div>
+              </div>
+              <div class="Likedresumesdiv">
+                <p class="filtercolumnheading">Badges</p>
+                <div class="flex-div">
+                  <input class="checkboxfilters" type="checkbox" name="badges" value="Most Wanted"> <span
+                    class="checkboxheading">Most Wanted</span> <br>
+                </div>
+                <div class="flex-div">
+                  <input class="checkboxfilters" type="checkbox" name="badges" value="Completed Profile"> <span
+                    class="checkboxheading">Completed Profile</span> <br>
+                </div>
+                <div class="flex-div">
+                  <input class="checkboxfilters" type="checkbox" name="badges" value="Recently Added Profile"> <span
+                    class="checkboxheading">Recently Added Profile</span> <br>
+                </div>
+              </div>
+
+            </div>
+            <div class="filtercolumn">
+              <p class="filtercolumnheading">Locations</p>
+              <div class="flex-div">
+
+                <select name="location" id="" class="loactionselect">
+                  <option value="">City</option>
+                  <option value="Lahore">Lahore</option>
+                  <option value="Karachi">Karachi</option>
+                  <option value="Islamabad">Islamabad</option>
+                  <option value="Multan">Multan</option>
+                  <option value="Faisalabad">Faisalabad</option>
+                  <option value="Rawalpindi">Rawalpindi</option>
+
+                </select>
+
+              </div>
+              <div class="Likedresumesdivk">
+                <p class="filtercolumnheading">Shortlisted resumes</p>
+                <div class="flex-div">
+                  <input class="checkboxfilters radiotrue" type="radio" name="shortlisted" value="mostShortlisted"
+                    id="mostShortlisted">
+                  <label for="options" class="checkboxheading">Most shortlisted</label>
+                  <br>
+                </div>
+                <div class="flex-div">
+                  <input class="checkboxfilters radiotrue" type="radio" name="shortlisted" value="leastShortlisted"
+                    id="leastShortlisted">
+                  <label for="options" class="checkboxheading">Least shortlisted</label>
+                  <br>
+                </div>
+              </div>
+
+              <div class="Likedresumesdiv">
+                <p class="filtercolumnheading">Recently Uploaded</p>
+                <div class="flex-div">
+                  <input class="checkboxfilters radiotrue" type="radio" name="recentlyUploaded" value="any"
+                    id="options1">
+                  <label for="options1" class="checkboxheading">Any time</label><br>
+                </div>
+                <div class="flex-div">
+                  <input class="checkboxfilters radiotrue" type="radio" name="recentlyUploaded" value="24hours"
+                    id="options2">
+                  <label for="options2" class="checkboxheading">Past 24 hours</label><br>
+                </div>
+                <div class="flex-div">
+                  <input class="checkboxfilters radiotrue" type="radio" name="recentlyUploaded" value="week"
+                    id="options3">
+                  <label for="options3" class="checkboxheading">Past week</label><br>
+                </div>
+                <div class="flex-div">
+                  <input class="checkboxfilters radiotrue" type="radio" name="recentlyUploaded" value="month"
+                    id="options4">
+                  <label for="options4" class="checkboxheading">Past month</label><br>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <button type="submit" class="UploadBtn filterButton">Apply Filter</button>
+        </form>
+      </div>
+
+
+
+    </div>
+
+  </div>
+</div>
+
+<div class="modal" id="myModal3">
+  <div class="modal-dialog">
+    <div id="notificationList" class="modal-content notificationBody">
+      <div class="notification">
+        <div class="indvidualNotification">
+          <div class="notificationColumn">
+            <p class="notificationText"></p>
+            <p class="chatTime marginZero"></p>
+          </div>
+          <div class="notificationImmage">
+            <!-- <img src="" alt=""> -->
+          </div>
+        </div>
+      </div>
+      <p class="expandNotification">View All Notification</p>
+    </div>
+  </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const socket = io();
+      const notificationCounter = document.getElementById('notificationCounter');
+
+      socket.emit('registerUser', '<%= userId %>');
+      console.log("User registered with ID:", '<%= userId %>');
+      socket.on('notification', (data) => {
+        console.log('New notification received:', data.message);
+
+
+        const currentCount = parseInt(notificationCounter.textContent, 10);
+        notificationCounter.textContent = currentCount + 1;
+
+      
+        const notificationList = document.getElementById('notificationList');
+        const newNotification = document.createElement('div');
+        newNotification.className = 'indvidualNotification';
+        let notificationContent = `
+    <div class="notificationColumn">
+      <p class="notificationText">${data.message}</p>
+      <p class="chatTime marginZero">${new Date(data.date).toLocaleString()}</p>
+    </div>
+    <div class="notificationImmage">
+      <img src="/images/bellicon.png" alt="Notification Icon">
+    </div>
+  `;
+
+  // Only add a link for message notifications that include a URL
+  if (data.url) {
+    notificationContent = `<a href="${data.url}">${notificationContent}</a>`;
+  }
+
+  newNotification.innerHTML = notificationContent;
+  notificationList.prepend(newNotification);
+});
+      fetchNotifications();
+    });
+    function fetchNotifications() {
+  fetch('/notifications/count')
+    .then(response => response.json())
+    .then(data => {
+      const { notifications, unreadCount } = data;
+      // Update the DOM with the notifications
+      updateNotificationDOM(notifications);
+      // Update the notification count badge
+      updateNotificationCount(unreadCount);
+    })
+    .catch(error => console.error('Error fetching notifications:', error));
+}
+// Function to update the notification count badge
+function updateNotificationCount(count) {
+  const bellIcon = document.querySelector('.navbarbellIcon');
+  // If there is an unread count, show a badge with the count
+  if (count > 0) {
+    bellIcon.dataset.badge = count;
+  } else {
+    delete bellIcon.dataset.badge;
+  }
+}
+
+// Function to populate the notification modal
+function updateNotificationDOM(notifications) {
+  const notificationList = document.getElementById('notificationList');
+  // Clear the notification list before adding new ones
+  notificationList.innerHTML = '';
+  // Create HTML for each notification and prepend it to the list
+  notifications.forEach(notification => {
+    const notifElement = document.createElement('div');
+    notifElement.className = 'indvidualNotification';
+    notifElement.innerHTML = `
+    <a href="${notification.url}" class="notificationLink">
+      <div class="notificationColumn">
+        <p class="notificationText">${notification.message}</p>
+        <p class="chatTime marginZero">${new Date(notification.date).toLocaleString()}</p>
+      </div>
+      <div class="notificationImmage">
+        <img src="/images/bellicon.png" alt="Notification Icon">
+      </div>
+    </a>
+    `;
+    notificationList.appendChild(notifElement);
+  });
+}
+  </script>
+<script>
+  documentEvner('DOMContentLoaded', () => {
+    const currentPage = window.location.pathname; 
+    if (currentPage === '/chat') {
+      document.getElementById('chatFill').style.display = 'block';
+      document.getElementById('svg4').style.display = 'none';
+    } else {
+      document.getElementById('svg4').style.display = 'block';
+      document.getElementById('chatFill').style.display = 'none';
+
+    }
+
+  });
+</script>

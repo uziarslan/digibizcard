@@ -1,0 +1,36 @@
+<nav class="navbar">
+  <div class="navWrapper">
+    <img class="logo" src="/images/Navlogo.png" />
+    <div class="buttonWrapper">
+      <a href="#" class="employee">Find Employees</a>
+      <a href="#" class="employee">For Employees</a>
+      <% if(!user ) { %>
+      <a href="/user/login" class="loginButton">Login</a>
+      <a href="/user/signup" class="registerButton">Register</a>
+      <% } else { %>
+        <a href="/user/logout" class="registerButton">Logout</a>
+     <% } %>
+    </div>
+    <div class="hiddenNv">
+        
+   
+        <svg data-toggle="modal" data-target="#myModal11" class="hamburger" viewBox="0 0 100 80" width="40" height="40">
+          <rect width="65" height="5" rx="10"></rect>
+          <rect y="20" width="65" height="5" rx="10"></rect>
+          <rect y="40" width="65" height="5" rx="10"></rect>
+              </svg>
+            </div>
+  </div>
+  <div class="modal" id="myModal11">
+    <div class="hamburgerDiv">
+      <a href="#" class="employee">Find Employees</a>
+      <a href="#" class="employee">For Employees</a>
+      <% if(!user ) { %>
+        <a href="/user/login" class="loginButton">Login</a>
+        <a href="/user/signup" class="registerButton">Register</a>
+        <% } else { %>
+          <a href="/user/logout" class="registerButton">Logout</a>
+       <% } %>
+    </div>
+  </div>
+</nav>

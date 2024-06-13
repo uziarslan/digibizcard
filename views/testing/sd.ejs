@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Users</title>
+    <link rel="stylesheet" href="/path/to/your/css/style.css"> <!-- Update with your stylesheet's path -->
+</head>
+<body>
+    <h1>Filtered Users</h1>
+    <div class="user-list">
+        <% if (users && users.length > 0) { %>
+            <% users.forEach(user => { %>
+                <div class="user-card">
+                    <h2 class="user-name"><%= user.firstName %> <%= user.lastName %></h2>
+                    <p class="user-location">Location: <%= user.location %></p>
+                    <p class="user-industry">Industry: <%= user.industry %></p>
+                    <p class="user-shortlisted">Shortlisted: <%= user.savedcount %> times</p>
+                    <p class="user-liked">Liked: <%= user.likescount %> times</p>
+                    <% if(user.badges && user.badges.length > 0) { %>
+                        <div class="user-badges">
+                            Badges:
+                            <% user.badges.forEach(badge => { %>
+                                <span class="badge"><%= badge %></span>
+                            <% }) %>
+                        </div>
+                    <% } %>
+                    <% if (user.video) { %>
+                        <div class="user-video">
+                            <video width="320" height="240" controls>
+                                <source src="<%= user.video %>" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    <% } %>
+
+
+                    <a href="/user/viewProfile/<%= user._id %>" class="view-profile-btn">View Profile</a>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <!-- Optional: Display a message if no users are found -->
+            <p>No users found. Try adjusting your filters.</p>
+        <% } %>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+<%-include('../partials/head', {title: "Upload Video"}) %>
+<%-include('../partials/navbarUpload') %>
+
+<%- include('../partials/flash') %>
+  <div class="uploadVideoScreen" id="uploadVideoScreen">
+  
+    <h1 class="uploadHeading"  >Upload Video resume</h1>
+    <form class="uploadVideoForm" action="/upload-video" id="uploadvideoForm" method="post" enctype="multipart/form-data"> 
+      <input class="formUploadInput" type="file" id="video" name="video" accept="video/*">
+      <div class="uploadItems">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M28 19V26C28 26.5304 27.7893 27.0391 27.4142 27.4142C27.0391 27.7893 26.5304 28 26 28H6C5.46957 28 4.96086 27.7893 4.58579 27.4142C4.21071 27.0391 4 26.5304 4 26V19C4 18.7348 4.10536 18.4804 4.29289 18.2929C4.48043 18.1053 4.73478 18 5 18C5.26522 18 5.51957 18.1053 5.70711 18.2929C5.89464 18.4804 6 18.7348 6 19V26H26V19C26 18.7348 26.1054 18.4804 26.2929 18.2929C26.4804 18.1053 26.7348 18 27 18C27.2652 18 27.5196 18.1053 27.7071 18.2929C27.8946 18.4804 28 18.7348 28 19ZM11.7075 10.7075L15 7.41374V19C15 19.2652 15.1054 19.5196 15.2929 19.7071C15.4804 19.8946 15.7348 20 16 20C16.2652 20 16.5196 19.8946 16.7071 19.7071C16.8946 19.5196 17 19.2652 17 19V7.41374L20.2925 10.7075C20.4801 10.8951 20.7346 11.0005 21 11.0005C21.2654 11.0005 21.5199 10.8951 21.7075 10.7075C21.8951 10.5199 22.0006 10.2654 22.0006 9.99999C22.0006 9.73463 21.8951 9.48013 21.7075 9.29249L16.7075 4.29249C16.6146 4.19952 16.5043 4.12576 16.3829 4.07543C16.2615 4.02511 16.1314 3.99921 16 3.99921C15.8686 3.99921 15.7385 4.02511 15.6171 4.07543C15.4957 4.12576 15.3854 4.19952 15.2925 4.29249L10.2925 9.29249C10.1049 9.48013 9.99944 9.73463 9.99944 9.99999C9.99944 10.2654 10.1049 10.5199 10.2925 10.7075C10.4801 10.8951 10.7346 11.0005 11 11.0005C11.2654 11.0005 11.5199 10.8951 11.7075 10.7075Z" fill="#79767A"/>
+        </svg>
+
+        <p class="uploadMiniText">select video to upload</p>
+
+        <div class="buttonBrowse">
+            Browser
+        </div>
+      </div>
+      <!-- <button type="submit">Upload Video</button> -->
+    </form>
+    <div class="itemUpload">
+        <div class="indvidualItem"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M9 1.6875C7.55373 1.6875 6.13993 2.11637 4.9374 2.91988C3.73486 3.72339 2.7976 4.86544 2.24413 6.20163C1.69067 7.53781 1.54586 9.00811 1.82801 10.4266C2.11017 11.8451 2.80661 13.148 3.82928 14.1707C4.85196 15.1934 6.15492 15.8898 7.57341 16.172C8.99189 16.4541 10.4622 16.3093 11.7984 15.7559C13.1346 15.2024 14.2766 14.2651 15.0801 13.0626C15.8836 11.8601 16.3125 10.4463 16.3125 9C16.3105 7.06123 15.5394 5.20246 14.1685 3.83154C12.7975 2.46063 10.9388 1.68955 9 1.6875ZM12.2105 7.71047L8.27297 11.648C8.22073 11.7003 8.15869 11.7418 8.09041 11.7701C8.02212 11.7984 7.94892 11.8129 7.875 11.8129C7.80108 11.8129 7.72789 11.7984 7.6596 11.7701C7.59131 11.7418 7.52928 11.7003 7.47703 11.648L5.78953 9.96047C5.68399 9.85492 5.62469 9.71177 5.62469 9.5625C5.62469 9.41323 5.68399 9.27008 5.78953 9.16453C5.89508 9.05898 6.03824 8.99969 6.1875 8.99969C6.33677 8.99969 6.47992 9.05898 6.58547 9.16453L7.875 10.4548L11.4145 6.91453C11.4668 6.86227 11.5288 6.82081 11.5971 6.79253C11.6654 6.76424 11.7386 6.74969 11.8125 6.74969C11.8864 6.74969 11.9596 6.76424 12.0279 6.79253C12.0962 6.82081 12.1582 6.86227 12.2105 6.91453C12.2627 6.96679 12.3042 7.02884 12.3325 7.09712C12.3608 7.1654 12.3753 7.23859 12.3753 7.3125C12.3753 7.38641 12.3608 7.4596 12.3325 7.52788C12.3042 7.59616 12.2627 7.65821 12.2105 7.71047Z" fill="#2B292D"/>
+          </svg>
+        <p class="itemText">Keep it brief (within 1 minute)</p>
+        </div>
+        <div class="indvidualItem"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M9 1.6875C7.55373 1.6875 6.13993 2.11637 4.9374 2.91988C3.73486 3.72339 2.7976 4.86544 2.24413 6.20163C1.69067 7.53781 1.54586 9.00811 1.82801 10.4266C2.11017 11.8451 2.80661 13.148 3.82928 14.1707C4.85196 15.1934 6.15492 15.8898 7.57341 16.172C8.99189 16.4541 10.4622 16.3093 11.7984 15.7559C13.1346 15.2024 14.2766 14.2651 15.0801 13.0626C15.8836 11.8601 16.3125 10.4463 16.3125 9C16.3105 7.06123 15.5394 5.20246 14.1685 3.83154C12.7975 2.46063 10.9388 1.68955 9 1.6875ZM12.2105 7.71047L8.27297 11.648C8.22073 11.7003 8.15869 11.7418 8.09041 11.7701C8.02212 11.7984 7.94892 11.8129 7.875 11.8129C7.80108 11.8129 7.72789 11.7984 7.6596 11.7701C7.59131 11.7418 7.52928 11.7003 7.47703 11.648L5.78953 9.96047C5.68399 9.85492 5.62469 9.71177 5.62469 9.5625C5.62469 9.41323 5.68399 9.27008 5.78953 9.16453C5.89508 9.05898 6.03824 8.99969 6.1875 8.99969C6.33677 8.99969 6.47992 9.05898 6.58547 9.16453L7.875 10.4548L11.4145 6.91453C11.4668 6.86227 11.5288 6.82081 11.5971 6.79253C11.6654 6.76424 11.7386 6.74969 11.8125 6.74969C11.8864 6.74969 11.9596 6.76424 12.0279 6.79253C12.0962 6.82081 12.1582 6.86227 12.2105 6.91453C12.2627 6.96679 12.3042 7.02884 12.3325 7.09712C12.3608 7.1654 12.3753 7.23859 12.3753 7.3125C12.3753 7.38641 12.3608 7.4596 12.3325 7.52788C12.3042 7.59616 12.2627 7.65821 12.2105 7.71047Z" fill="#2B292D"/>
+          </svg>
+        <p class="itemText">Tailor it to the position</p>
+        </div>
+        <div class="indvidualItem"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M9 1.6875C7.55373 1.6875 6.13993 2.11637 4.9374 2.91988C3.73486 3.72339 2.7976 4.86544 2.24413 6.20163C1.69067 7.53781 1.54586 9.00811 1.82801 10.4266C2.11017 11.8451 2.80661 13.148 3.82928 14.1707C4.85196 15.1934 6.15492 15.8898 7.57341 16.172C8.99189 16.4541 10.4622 16.3093 11.7984 15.7559C13.1346 15.2024 14.2766 14.2651 15.0801 13.0626C15.8836 11.8601 16.3125 10.4463 16.3125 9C16.3105 7.06123 15.5394 5.20246 14.1685 3.83154C12.7975 2.46063 10.9388 1.68955 9 1.6875ZM12.2105 7.71047L8.27297 11.648C8.22073 11.7003 8.15869 11.7418 8.09041 11.7701C8.02212 11.7984 7.94892 11.8129 7.875 11.8129C7.80108 11.8129 7.72789 11.7984 7.6596 11.7701C7.59131 11.7418 7.52928 11.7003 7.47703 11.648L5.78953 9.96047C5.68399 9.85492 5.62469 9.71177 5.62469 9.5625C5.62469 9.41323 5.68399 9.27008 5.78953 9.16453C5.89508 9.05898 6.03824 8.99969 6.1875 8.99969C6.33677 8.99969 6.47992 9.05898 6.58547 9.16453L7.875 10.4548L11.4145 6.91453C11.4668 6.86227 11.5288 6.82081 11.5971 6.79253C11.6654 6.76424 11.7386 6.74969 11.8125 6.74969C11.8864 6.74969 11.9596 6.76424 12.0279 6.79253C12.0962 6.82081 12.1582 6.86227 12.2105 6.91453C12.2627 6.96679 12.3042 7.02884 12.3325 7.09712C12.3608 7.1654 12.3753 7.23859 12.3753 7.3125C12.3753 7.38641 12.3608 7.4596 12.3325 7.52788C12.3042 7.59616 12.2627 7.65821 12.2105 7.71047Z" fill="#2B292D"/>
+          </svg>
+        <p class="itemText">Be creative but professional</p>
+        </div>
+    </div>
+
+
+  </div>
+  <div id="loadingProgressUpload">
+    <h3 class="progressBarHead">Uploading video resume</h3>
+    <p class="progressBarPara">Just a moment, we're creating your Video resume!</p>
+    <div class="progress" id="uploadProgressBar" value="0" max="100">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 46%"></div>
+    </div>
+  </div>
+  <%- include('../partials/bottomNav') %>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const videoInput = document.getElementById('video');
+    const videoForm = document.getElementById('uploadvideoForm');
+
+    videoInput.addEventListener('change', () => {
+        const file = videoInput.files[0];
+        if (file) {
+            videoForm.submit();
+        }
+    });
+});
+
+// upload progress bar
+document.addEventListener('DOMContentLoaded', function () {
+            var fileInput = document.getElementById('video');
+            var progressBar = document.getElementById('uploadProgressBar');
+
+            fileInput.addEventListener('change', function () {
+                document.getElementById('uploadVideoScreen').style.display = 'none';
+                document.getElementById('loadingProgressUpload').style.display = 'flex';
+
+                var formData = new FormData();
+                formData.append('video', fileInput.files[0]);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.upload.addEventListener('progress', function (event) {
+                    if (event.lengthComputable) {
+                        var percentComplete = (event.loaded / event.total) * 100;
+                        progressBar.value = percentComplete;
+
+                        if (percentComplete === 100) {
+                         
+                            setTimeout(function () {
+                                window.location.href = '/uploadVideoSuccess'; 
+                            }, 3000);
+                        }
+                    }
+                });
+
+                xhr.addEventListener('load', function () {
+         
+                    console.log('File uploaded successfully!');
+                });
+
+                xhr.addEventListener('error', function () {
+           
+                    console.error('Error occurred during file upload.');
+                });
+
+                xhr.open('POST', '/upload-video', true);
+                xhr.send(formData);
+            });
+        });
+  </script>
+  <%-include('../partials/body') %>

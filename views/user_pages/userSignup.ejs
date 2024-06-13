@@ -1,0 +1,267 @@
+<%-include('../partials/head', {title: "Signup"}) %>
+
+<%-include('../partials/navbar') %>
+<%- include('../partials/flash') %>
+<div class="signuprow">
+
+  <div class="signupcolumn">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide maindivset">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner" style="width: 327px; margin: 0 auto;">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="/images/signupSliderFirst.svg" class="d-block w-100 signupSliderImg" alt="...">
+          <div class="carousel-caption d-none d-md-block slideText">
+            <h5 class="sliderSignupHeading">Browse Talent</h5>
+            <p class="slierTextPara">Access more than 1000+ digital resumes and thousands of daily job seekers to find qualified candidates.</p>
+          </div>
+        </div>
+        <div class="carousel-item " data-bs-interval="10000">
+          <img src="/images/slid3.png" class="d-block w-100 signupSliderImg" alt="...">
+          <div class="carousel-caption d-none d-md-block slideText">
+            <h5 class="sliderSignupHeading">Hire Talent</h5>
+            <p class="slierTextPara">Sit back and let "Hello Hire" connect you with relevant job offers tailored to your qualifications.</p>
+          </div>
+        </div>
+        <div class="carousel-item " data-bs-interval="10000">
+          <img src="/images/slid2.png" class="d-block w-100 signupSliderImg" alt="...">
+          <div class="carousel-caption d-none d-md-block slideText">
+            <h5 class="sliderSignupHeading">Create Your Account</h5>
+            <p class="slierTextPara">Sign up and create your account: Join in a few clicks and explore countless talented candidates.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button id="nextBtn" class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+  </div>
+  <div class="formSection">
+  <h3 class="formHeading">Create Your Account</h3>
+  <p class="formPara">Already Have an account? <a href="/user/login" class="formChangeAnchor">Sign In</a></p>
+  <div class="wrapper">
+    <!-- <div class="title-text">
+      <div class="title login">Login Form</div>
+      <div class="title signup">Signup Form</div>
+    </div> -->
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login" class="slide login">Register as a User</label>
+        <label for="signup" class="slide signup">Register as an Organization</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form action="/usersignup" method="post" id="userForm" class="login">
+        
+          <div class="field">
+            <label class="inputLable" for="Email">Email</label>
+            <input type="text" placeholder="person@email.com"  name="email" required>
+          </div>
+          <div class="field">
+            <label class="inputLable" for="Password">Password</label>
+            <input type="password" placeholder="************" name="password" required>
+          </div>
+         
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Register">
+          </div>
+          
+        </form>
+
+        <form action="/organization/signup" method="post" id="orgForm" class="signup">
+          
+          <div class="field">
+            <label class="inputLable" for="Email">Email</label>
+            <input type="text" placeholder="person@email.com" name="email" required>
+          </div>
+          <div class="field">
+            <label class="inputLable" for="Password">Password</label>
+            <input type="password" placeholder="************" name="password" required>
+          </div>
+          
+          <div class="field">
+            <label class="inputLable" for="text">Website URL</label>
+            <input type="text" placeholder="example.com" name="websiteUrl" required>
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Register">
+          </div>
+        
+        </form>
+
+       
+      </div>
+    </div>
+  </div>
+  <p class="miniheadings1">
+    <span class="with-line1"></span>
+    <span class="h123">OR</span>
+    <span class="with-line2"></span>
+   
+  </p>
+
+  <div id="socialRowUser" class="socialRow">
+    <a href="/google-signup"> 
+    <div class="socialDiv">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+        <g clip-path="url(#clip0_180_3207)">
+          <path d="M24.0993 12.2765C24.0993 11.4608 24.0331 10.6406 23.892 9.83813H12.5732V14.4591H19.055C18.786 15.9495 17.9218 17.2679 16.6563 18.1056V21.104H20.5233C22.7941 19.014 24.0993 15.9274 24.0993 12.2765Z" fill="#4285F4"/>
+          <path d="M12.5721 24.0008C15.8086 24.0008 18.538 22.9382 20.5266 21.1039L16.6596 18.1055C15.5837 18.8375 14.1948 19.252 12.5765 19.252C9.44592 19.252 6.7915 17.1399 5.83908 14.3003H1.84863V17.3912C3.88575 21.4434 8.03493 24.0008 12.5721 24.0008Z" fill="#34A853"/>
+          <path d="M5.83578 14.3002C5.33312 12.8099 5.33312 11.196 5.83578 9.70569V6.61475H1.84974C0.147742 10.0055 0.147742 14.0004 1.84974 17.3912L5.83578 14.3002Z" fill="#FBBC04"/>
+          <path d="M12.5721 4.74966C14.283 4.7232 15.9365 5.36697 17.1755 6.54867L20.6015 3.12262C18.4321 1.0855 15.5528 -0.034466 12.5721 0.000808666C8.03493 0.000808666 3.88574 2.55822 1.84863 6.61481L5.83467 9.70575C6.78268 6.86173 9.4415 4.74966 12.5721 4.74966Z" fill="#EA4335"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_180_3207">
+            <rect width="24" height="24" fill="white" transform="translate(0.333008)"/>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  </a>
+    <a href="/facebook-signup">
+    <div class="socialDiv">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <g clip-path="url(#clip0_180_3213)">
+          <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z" fill="#1877F2"/>
+          <path d="M16.6711 15.4688L17.2031 12H13.875V9.75C13.875 8.80102 14.34 7.875 15.8306 7.875H17.3438V4.92188C17.3438 4.92188 15.9705 4.6875 14.6576 4.6875C11.9166 4.6875 10.125 6.34875 10.125 9.35625V12H7.07812V15.4688H10.125V23.8542C11.3674 24.0486 12.6326 24.0486 13.875 23.8542V15.4688H16.6711Z" fill="white"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_180_3213">
+            <rect width="24" height="24" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+   </a>
+    <div class="socialDiv">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+        <path d="M21.5079 17.1449C21.1752 17.9135 20.7813 18.6211 20.3251 19.2715C19.7031 20.1583 19.1939 20.7721 18.8014 21.113C18.193 21.6724 17.5412 21.959 16.8432 21.9753C16.3421 21.9753 15.7378 21.8327 15.0344 21.5434C14.3286 21.2555 13.6801 21.113 13.087 21.113C12.4651 21.113 11.798 21.2555 11.0845 21.5434C10.37 21.8327 9.79432 21.9834 9.3542 21.9984C8.68485 22.0269 8.01768 21.7322 7.35172 21.113C6.92668 20.7422 6.39503 20.1067 5.75813 19.2063C5.0748 18.2449 4.513 17.13 4.07288 15.8589C3.60152 14.486 3.36523 13.1565 3.36523 11.8694C3.36523 10.3951 3.68382 9.12345 4.32193 8.05784C4.82343 7.20191 5.49061 6.52672 6.32563 6.03105C7.16066 5.53539 8.0629 5.2828 9.03453 5.26664C9.56618 5.26664 10.2634 5.43109 11.1298 5.75429C11.9937 6.07858 12.5484 6.24303 12.7917 6.24303C12.9735 6.24303 13.5897 6.05074 14.6344 5.66738C15.6224 5.31186 16.4562 5.16466 17.1392 5.22264C18.9902 5.37202 20.3807 6.10167 21.3055 7.41619C19.6501 8.4192 18.8313 9.82403 18.8476 11.6262C18.8625 13.03 19.3718 14.1981 20.3726 15.1256C20.8262 15.5561 21.3327 15.8888 21.8962 16.1251C21.774 16.4795 21.645 16.819 21.5079 17.1449ZM17.2628 0.440369C17.2628 1.54062 16.8608 2.56792 16.0596 3.51878C15.0928 4.64917 13.9233 5.30236 12.655 5.19929C12.6389 5.06729 12.6295 4.92837 12.6295 4.78239C12.6295 3.72615 13.0893 2.59576 13.9059 1.67152C14.3135 1.20356 14.832 0.814453 15.4608 0.504058C16.0882 0.198295 16.6816 0.0292007 17.2397 0.000244141C17.256 0.147331 17.2628 0.294426 17.2628 0.440355V0.440369Z" fill="black"/>
+      </svg>
+    </div>
+  </div>
+
+
+  <div id="socialRowOrganization" class="socialRow">
+    <a href="/google-signup"> 
+    <div class="socialDiv">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+        <g clip-path="url(#clip0_180_3207)">
+          <path d="M24.0993 12.2765C24.0993 11.4608 24.0331 10.6406 23.892 9.83813H12.5732V14.4591H19.055C18.786 15.9495 17.9218 17.2679 16.6563 18.1056V21.104H20.5233C22.7941 19.014 24.0993 15.9274 24.0993 12.2765Z" fill="#4285F4"/>
+          <path d="M12.5721 24.0008C15.8086 24.0008 18.538 22.9382 20.5266 21.1039L16.6596 18.1055C15.5837 18.8375 14.1948 19.252 12.5765 19.252C9.44592 19.252 6.7915 17.1399 5.83908 14.3003H1.84863V17.3912C3.88575 21.4434 8.03493 24.0008 12.5721 24.0008Z" fill="#34A853"/>
+          <path d="M5.83578 14.3002C5.33312 12.8099 5.33312 11.196 5.83578 9.70569V6.61475H1.84974C0.147742 10.0055 0.147742 14.0004 1.84974 17.3912L5.83578 14.3002Z" fill="#FBBC04"/>
+          <path d="M12.5721 4.74966C14.283 4.7232 15.9365 5.36697 17.1755 6.54867L20.6015 3.12262C18.4321 1.0855 15.5528 -0.034466 12.5721 0.000808666C8.03493 0.000808666 3.88574 2.55822 1.84863 6.61481L5.83467 9.70575C6.78268 6.86173 9.4415 4.74966 12.5721 4.74966Z" fill="#EA4335"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_180_3207">
+            <rect width="24" height="24" fill="white" transform="translate(0.333008)"/>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  </a>
+    <a href="/facebook-signup">
+    <div class="socialDiv">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <g clip-path="url(#clip0_180_3213)">
+          <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z" fill="#1877F2"/>
+          <path d="M16.6711 15.4688L17.2031 12H13.875V9.75C13.875 8.80102 14.34 7.875 15.8306 7.875H17.3438V4.92188C17.3438 4.92188 15.9705 4.6875 14.6576 4.6875C11.9166 4.6875 10.125 6.34875 10.125 9.35625V12H7.07812V15.4688H10.125V23.8542C11.3674 24.0486 12.6326 24.0486 13.875 23.8542V15.4688H16.6711Z" fill="white"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_180_3213">
+            <rect width="24" height="24" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+   </a>
+    <div class="socialDiv">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+        <path d="M21.5079 17.1449C21.1752 17.9135 20.7813 18.6211 20.3251 19.2715C19.7031 20.1583 19.1939 20.7721 18.8014 21.113C18.193 21.6724 17.5412 21.959 16.8432 21.9753C16.3421 21.9753 15.7378 21.8327 15.0344 21.5434C14.3286 21.2555 13.6801 21.113 13.087 21.113C12.4651 21.113 11.798 21.2555 11.0845 21.5434C10.37 21.8327 9.79432 21.9834 9.3542 21.9984C8.68485 22.0269 8.01768 21.7322 7.35172 21.113C6.92668 20.7422 6.39503 20.1067 5.75813 19.2063C5.0748 18.2449 4.513 17.13 4.07288 15.8589C3.60152 14.486 3.36523 13.1565 3.36523 11.8694C3.36523 10.3951 3.68382 9.12345 4.32193 8.05784C4.82343 7.20191 5.49061 6.52672 6.32563 6.03105C7.16066 5.53539 8.0629 5.2828 9.03453 5.26664C9.56618 5.26664 10.2634 5.43109 11.1298 5.75429C11.9937 6.07858 12.5484 6.24303 12.7917 6.24303C12.9735 6.24303 13.5897 6.05074 14.6344 5.66738C15.6224 5.31186 16.4562 5.16466 17.1392 5.22264C18.9902 5.37202 20.3807 6.10167 21.3055 7.41619C19.6501 8.4192 18.8313 9.82403 18.8476 11.6262C18.8625 13.03 19.3718 14.1981 20.3726 15.1256C20.8262 15.5561 21.3327 15.8888 21.8962 16.1251C21.774 16.4795 21.645 16.819 21.5079 17.1449ZM17.2628 0.440369C17.2628 1.54062 16.8608 2.56792 16.0596 3.51878C15.0928 4.64917 13.9233 5.30236 12.655 5.19929C12.6389 5.06729 12.6295 4.92837 12.6295 4.78239C12.6295 3.72615 13.0893 2.59576 13.9059 1.67152C14.3135 1.20356 14.832 0.814453 15.4608 0.504058C16.0882 0.198295 16.6816 0.0292007 17.2397 0.000244141C17.256 0.147331 17.2628 0.294426 17.2628 0.440355V0.440369Z" fill="black"/>
+      </svg>
+    </div>
+  </div>
+<script  src="./script.js"></script>
+
+      
+
+
+  </div>
+</div>
+<script>
+  function autoClickNextBtn() {
+      // Trigger click on the "Next" button every 5 seconds
+      setInterval(function() {
+          var nextBtn = document.getElementById('nextBtn');
+          var carousel = new bootstrap.Carousel(document.getElementById('carouselExampleDark'));
+          carousel.next();
+      }, 2000);
+  }
+
+  // Call the function when the page loads
+  document.addEventListener("DOMContentLoaded", autoClickNextBtn);
+</script>
+<script>const loginText = document.querySelector(".title-text .login");
+  const loginForm = document.querySelector("form.login");
+  const loginBtn = document.querySelector("label.login");
+  const signupBtn = document.querySelector("label.signup");
+  const sliderTab = document.querySelector(".slider-tab");
+  const signupLink = document.querySelector("form .signup-link a");
+  signupBtn.onclick = (()=>{
+    sliderTab.style.width = "193px";
+    sliderTab.style.left = "158px";
+    sliderTab.style.marginLeft = "-20px";
+    loginForm.style.marginLeft = "-50%";
+    loginText.style.marginLeft = "-50%";
+  });
+  loginBtn.onclick = (()=>{
+    sliderTab.style.width = "134px";
+    sliderTab.style.left = "4px";
+    sliderTab.style.marginLeft = "0px";
+    loginForm.style.marginLeft = "0%";
+    loginText.style.marginLeft = "0%";
+  });
+  signupLink.onclick = (()=>{
+    signupBtn.click();
+    return false;
+  });</script>
+  <script>
+    // Function to toggle socialRow based on registration type
+    function toggleSocialRow(registrationType) {
+      var socialRowUser = document.getElementById('socialRowUser');
+      var socialRowOrganization = document.getElementById('socialRowOrganization');
+  
+      if (registrationType === 'user') {
+        socialRowUser.style.display = 'flex';
+        socialRowOrganization.style.display = 'none';
+      } else {
+        socialRowUser.style.display = 'none';
+        socialRowOrganization.style.display = 'flex';
+      }
+    }
+  
+    // Initially hide organization socialRow
+    toggleSocialRow('user');
+  
+    // Event listener for radio buttons to switch registration type
+    var radioButtons = document.querySelectorAll('input[name="slide"]');
+    radioButtons.forEach(function (radioButton) {
+      radioButton.addEventListener('change', function () {
+        var registrationType = this.id === 'login' ? 'user' : 'organization';
+        toggleSocialRow(registrationType);
+      });
+    });
+  </script>
+  
+<%-include('../partials/body') %>
